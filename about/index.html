@@ -1,0 +1,492 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="[TOC] Linux 发展史与体系Linux 背景1. 什么是开源？开源（Open Source）指的是软件的源代码可以被公开、自由访问、修改和分发。开源软件通常遵循一定的许可证，如 GPL（GNU General Public License）或 MIT 许可证，以确保其自由使用、修改和共享的权利 开源的优势包括：  透明性：任何人都可以查看代码，减少安全隐患 协作性：全球开发者可以贡献代码，">
+<meta property="og:type" content="website">
+<meta property="og:title" content="about">
+<meta property="og:url" content="http://example.com/about/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="[TOC] Linux 发展史与体系Linux 背景1. 什么是开源？开源（Open Source）指的是软件的源代码可以被公开、自由访问、修改和分发。开源软件通常遵循一定的许可证，如 GPL（GNU General Public License）或 MIT 许可证，以确保其自由使用、修改和共享的权利 开源的优势包括：  透明性：任何人都可以查看代码，减少安全隐患 协作性：全球开发者可以贡献代码，">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/Linux.png">
+<meta property="og:image" content="http://example.com/image.png">
+<meta property="og:image" content="http://example.com/image/%E5%88%9D%E8%AF%86Linux/1743421299975.png">
+<meta property="og:image" content="http://example.com/image/%E5%88%9D%E8%AF%86Linux/1743421327200.png">
+<meta property="og:image" content="http://example.com/image/%E5%88%9D%E8%AF%86Linux/1743421431557.png">
+<meta property="og:image" content="http://example.com/image/%E5%88%9D%E8%AF%86Linux/1743422095825.png">
+<meta property="og:image" content="http://example.com/image/%E5%88%9D%E8%AF%86Linux/1743422272316.png">
+<meta property="og:image" content="http://example.com/image/%E5%88%9D%E8%AF%86Linux/1743422363346.png">
+<meta property="og:image" content="http://example.com/image/%E5%88%9D%E8%AF%86Linux/1743422607123.png">
+<meta property="og:image" content="http://example.com/image/%E5%88%9D%E8%AF%86Linux/1743422784943.png">
+<meta property="og:image" content="http://example.com/image/%E5%88%9D%E8%AF%86Linux/1743423314889.png">
+<meta property="og:image" content="http://example.com/image/%E5%88%9D%E8%AF%86Linux/1743423529165.png">
+<meta property="og:image" content="http://example.com/image/%E5%88%9D%E8%AF%86Linux/1744284842586.png">
+<meta property="og:image" content="http://example.com/image/%E5%88%9D%E8%AF%86Linux/1744284978030.png">
+<meta property="article:published_time" content="2025-11-17T11:40:12.000Z">
+<meta property="article:modified_time" content="2025-11-17T11:43:10.553Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/Linux.png">
+  
+  
+  
+  <title>about - Hexo</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 60vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fluid</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>Home</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>Archives</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>Categories</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>Tags</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>About</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="about"></span>
+          
+        </div>
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div id="board"
+          >
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+<article class="page-content">
+  <p>[TOC]</p>
+<h1 id="Linux-发展史与体系"><a href="#Linux-发展史与体系" class="headerlink" title="Linux 发展史与体系"></a>Linux 发展史与体系</h1><h2 id="Linux-背景"><a href="#Linux-背景" class="headerlink" title="Linux 背景"></a>Linux 背景</h2><h3 id="1-什么是开源？"><a href="#1-什么是开源？" class="headerlink" title="1. 什么是开源？"></a>1. 什么是开源？</h3><p>开源（<code>Open Source</code>）指的是软件的源代码可以被公开、自由访问、修改和分发。开源软件通常遵循一定的许可证，如 <code>GPL</code>（<code>GNU General Public License</code>）或 <code>MIT</code> 许可证，以确保其自由使用、修改和共享的权利</p>
+<p>开源的优势包括：</p>
+<ul>
+<li>透明性：任何人都可以查看代码，减少安全隐患</li>
+<li>协作性：全球开发者可以贡献代码，共同改进软件</li>
+<li>可定制性：用户可以根据需求修改代码</li>
+</ul>
+<h3 id="2-什么是-GNU？"><a href="#2-什么是-GNU？" class="headerlink" title="2. 什么是 GNU？"></a>2. 什么是 GNU？</h3><p><code>GNU</code>（<code>GNU&#39;s Not Unix</code>）是理查德·斯托曼（<code>Richard Stallman</code>）于 <code>1983</code> 年发起的自由软件项目，目标是创建一个完全自由的、与 <code>Unix</code> 兼容的操作系统</p>
+<p><code>GNU</code> 项目的主要组成部分：</p>
+<ul>
+<li><strong>GNU 工具链（GNU Toolchain）</strong>：包括 <code>GCC</code>（编译器）、<code>GDB</code>（调试器）、<code>Make</code>（构建工具）等</li>
+<li><strong>GNU C 库（glibc）</strong>：<code>Linux</code> 主要使用的标准 C 语言库</li>
+<li><strong>GNU Bash</strong>：<code>Linux</code> 系统中最常用的 <code>Shell</code>（命令行解释器）</li>
+<li><strong>GNU Emacs</strong>：一款功能强大的文本编辑器</li>
+</ul>
+<p>尽管 <code>GNU</code> 项目开发了大量关键组件，但其内核 <code>GNU Hurd</code> 进展缓慢，最终 <code>Linux</code> 内核填补了这一空白，形成了“GNU&#x2F;Linux”操作系统</p>
+<p><img src="/Linux.png" srcset="/img/loading.gif" lazyload alt="alt text"></p>
+<h2 id="Unix-的起源与发展"><a href="#Unix-的起源与发展" class="headerlink" title="Unix 的起源与发展"></a>Unix 的起源与发展</h2><h3 id="1-Unix-的诞生"><a href="#1-Unix-的诞生" class="headerlink" title="1. Unix 的诞生"></a>1. Unix 的诞生</h3><ul>
+<li><strong>Multics 项目（1960 年代）</strong>：麻省理工学院、通用电气和 <code>AT&amp;T</code> 贝尔实验室合作开发的多任务分时操作系统，因过于复杂，<code>AT&amp;T</code> 于 <code>1969</code> 年退出</li>
+<li><strong>Unix 诞生（1969 年）</strong>：贝尔实验室的肯·汤普逊（<code>Ken Thompson</code>）和丹尼斯·里奇（<code>Dennis Ritchie</code>）基于 <code>Multics</code> 经验，在 <code>DEC PDP-7</code> 计算机上开发出 <code>Unix</code></li>
+<li><strong>C 语言重写（1973 年）</strong>：<code>Unix</code> 最初使用汇编语言开发，后来里奇用 <code>C</code> 语言重写，提高了可移植性</li>
+<li><strong>BSD Unix（1977 年）</strong>：加州大学伯克利分校（<code>UCB</code>）基于 <code>Unix</code> 开发 <code>BSD</code>（<code>Berkeley Software Distribution</code>），为现代 <code>Unix</code> 和 <code>Linux</code> 贡献了 <code>TCP</code>&#x2F;<code>IP</code> 协议栈等关键技术</li>
+</ul>
+<h2 id="Linux-的诞生与发展"><a href="#Linux-的诞生与发展" class="headerlink" title="Linux 的诞生与发展"></a>Linux 的诞生与发展</h2><h3 id="1-Linux-诞生（1991-年）"><a href="#1-Linux-诞生（1991-年）" class="headerlink" title="1. Linux 诞生（1991 年）"></a>1. Linux 诞生（1991 年）</h3><ul>
+<li><strong>创始人</strong>：芬兰赫尔辛基大学学生林纳斯·托瓦兹（<code>Linus Torvalds</code>）</li>
+<li><strong>目标</strong>：起初是为了替代 <code>MINIX</code>，专为 <code>Intel 80386</code> 处理器开发</li>
+<li><strong>首次公开</strong>：<code>1991</code> 年 <code>8</code> 月 <code>25</code> 日，托瓦兹在 <code>Usenet</code> 论坛 <code>comp.os.minix</code> 发布 <code>Linux</code> 早期版本</li>
+<li><strong>开源化</strong>：<code>1992</code> 年 <code>Linux</code> 采用 <code>GNU GPL</code> 许可证，结合 <code>GNU</code> 软件形成完整的自由操作系统</li>
+</ul>
+<h3 id="2-Linux-发展历程"><a href="#2-Linux-发展历程" class="headerlink" title="2. Linux 发展历程"></a>2. Linux 发展历程</h3><ul>
+<li><strong>Linux 1.0（1994 年）</strong>：首次正式发布，支持多个硬件架构</li>
+<li><strong>Linux 2.0（1996 年）</strong>：增加对多处理器（<code>SMP</code>）的支持，提高性能</li>
+<li><strong>Linux 2.6（2003 年）</strong>：大幅优化内存管理、文件系统和网络</li>
+<li><strong>Linux 3.x - 6.x（2011 年 - 至今）</strong>：持续优化性能、安全性，增强对云计算、容器化和 <code>AI</code> 计算的支持</li>
+</ul>
+<h2 id="Linux-发行版体系"><a href="#Linux-发行版体系" class="headerlink" title="Linux 发行版体系"></a>Linux 发行版体系</h2><h3 id="1-主流-Linux-发行版分类"><a href="#1-主流-Linux-发行版分类" class="headerlink" title="1. 主流 Linux 发行版分类"></a>1. 主流 Linux 发行版分类</h3><p><code>Linux</code> 发行版是基于 <code>Linux</code> 内核和 <code>GNU</code> 工具集构建的完整操作系统，各发行版根据不同需求优化</p>
+<h4 id="1-1-社区驱动的发行版"><a href="#1-1-社区驱动的发行版" class="headerlink" title="1.1 社区驱动的发行版"></a>1.1 社区驱动的发行版</h4><ul>
+<li><strong>Debian</strong>（<code>1993</code> 年）：以稳定著称，广泛用于服务器</li>
+<li><strong>Arch Linux</strong>（<code>2002</code> 年）：滚动更新、极简设计，适合高级用户</li>
+<li><strong>Gentoo</strong>（<code>1999</code> 年）：源代码编译安装，灵活但复杂</li>
+</ul>
+<h4 id="1-2-商业公司支持的发行版"><a href="#1-2-商业公司支持的发行版" class="headerlink" title="1.2 商业公司支持的发行版"></a>1.2 商业公司支持的发行版</h4><ul>
+<li><strong>Red Hat Enterprise Linux（RHEL，2000 年）</strong>：由 <code>Red Hat</code> 开发，主要面向企业级服务器市场</li>
+<li><strong>Ubuntu（2004 年）</strong>：基于 <code>Debian</code>，友好易用，广泛用于桌面和服务器</li>
+<li><strong>SUSE Linux Enterprise（SLES，2000 年）</strong>：德国 <code>SUSE</code> 公司开发，主要面向企业市场</li>
+</ul>
+<h4 id="1-3-安全与渗透测试发行版"><a href="#1-3-安全与渗透测试发行版" class="headerlink" title="1.3 安全与渗透测试发行版"></a>1.3 安全与渗透测试发行版</h4><ul>
+<li><strong>Kali Linux（2013 年）</strong>：由 <code>Offensive Security</code> 维护，专门用于渗透测试和网络安全审计，内置大量安全工具</li>
+</ul>
+<p><img src="/image.png" srcset="/img/loading.gif" lazyload alt="alt text"></p>
+<h3 id="2-Linux-内核官网"><a href="#2-Linux-内核官网" class="headerlink" title="2. Linux 内核官网"></a>2. Linux 内核官网</h3><ul>
+<li><strong>Linux Kernel 官方网站</strong>：<a target="_blank" rel="noopener" href="https://www.kernel.org/">https://www.kernel.org</a></li>
+</ul>
+<h3 id="3-各大-Linux-发行版官网"><a href="#3-各大-Linux-发行版官网" class="headerlink" title="3. 各大 Linux 发行版官网"></a>3. 各大 Linux 发行版官网</h3><table>
+<thead>
+<tr>
+<th>发行版</th>
+<th>官网</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Debian</td>
+<td><a target="_blank" rel="noopener" href="https://www.debian.org/">https://www.debian.org</a></td>
+</tr>
+<tr>
+<td>Ubuntu</td>
+<td><a target="_blank" rel="noopener" href="https://ubuntu.com/">https://ubuntu.com</a></td>
+</tr>
+<tr>
+<td>Arch Linux</td>
+<td><a target="_blank" rel="noopener" href="https://archlinux.org/">https://archlinux.org</a></td>
+</tr>
+<tr>
+<td>Fedora</td>
+<td><a target="_blank" rel="noopener" href="https://getfedora.org/">https://getfedora.org</a></td>
+</tr>
+<tr>
+<td>CentOS</td>
+<td><a target="_blank" rel="noopener" href="https://www.centos.org/">https://www.centos.org</a></td>
+</tr>
+<tr>
+<td>openSUSE</td>
+<td><a target="_blank" rel="noopener" href="https://www.opensuse.org/">https://www.opensuse.org</a></td>
+</tr>
+<tr>
+<td>RHEL</td>
+<td><a target="_blank" rel="noopener" href="https://www.redhat.com/">https://www.redhat.com</a></td>
+</tr>
+<tr>
+<td>SUSE</td>
+<td><a target="_blank" rel="noopener" href="https://www.suse.com/">https://www.suse.com</a></td>
+</tr>
+<tr>
+<td>Kali Linux</td>
+<td><a target="_blank" rel="noopener" href="https://www.kali.org/">https://www.kali.org</a></td>
+</tr>
+</tbody></table>
+<h2 id="Linux-在现代计算领域的应用"><a href="#Linux-在现代计算领域的应用" class="headerlink" title="Linux 在现代计算领域的应用"></a>Linux 在现代计算领域的应用</h2><h3 id="1-社区与企业的力量"><a href="#1-社区与企业的力量" class="headerlink" title="1. 社区与企业的力量"></a>1. 社区与企业的力量</h3><ul>
+<li><strong>全球协作</strong><code>：Linux</code> 的成功离不开全球各地开发者的自发贡献。通过邮件列表、补丁提交和版本控制系统（如 <code>Git</code>），<code>Linux</code> 内核及相关软件得以不断改进和扩展。与此同时，许多公司（如 <code>IBM</code>、<code>Red Hat</code>、<code>Inte</code>l、<code>HP</code> 等）也投入大量资源支持 <code>Linux</code> 开发，使其在性能、稳定性和安全性上不断提升</li>
+<li><strong>Linux 基金会</strong>：<code>2007</code> 年，开放源代码发展实验室（<code>OSDL</code>）与自由标准组织合并成立了 <code>Linux</code> 基金会，进一步促进了 <code>Linux</code> 技术的普及和标准化，为 <code>Linux</code> 在服务器、数据中心、超级计算机等领域的发展提供了重要支持</li>
+</ul>
+<h3 id="2-广泛应用"><a href="#2-广泛应用" class="headerlink" title="2. 广泛应用"></a>2. 广泛应用</h3><ul>
+<li><strong>服务器和超级计算机</strong>：如今全球 <code>500</code> 强超级计算机中 <code>100%</code> 使用 <code>Linux</code>。在互联网时代，许多网站、云服务和数据中心都依赖 <code>Linux</code> 系统来保障高并发和高可用性</li>
+<li><strong>嵌入式与移动设备</strong>：除了传统的桌面和服务器，<code>Linux</code> 内核同样应用于嵌入式系统。<code>Android</code> 操作系统便是以 <code>Linux</code> 内核为基础构建的，广泛应用于智能手机、平板电脑、智能电视、路由器、机顶盒等众多领域</li>
+<li><strong>桌面环境</strong>：虽然在桌面市场 <code>Linux</code> 面临着 <code>Windows</code> 和 <code>macOS</code> 的竞争，但诸如<code>Ubuntu</code>、F<code>edora</code>、<code>Debian</code> 等发行版凭借着稳定性和安全性，也拥有不少忠实用户和特定领域的应用场景</li>
+</ul>
+<h1 id="2-搭建Linux环境"><a href="#2-搭建Linux环境" class="headerlink" title="2 搭建Linux环境"></a>2 搭建Linux环境</h1><h2 id="1-Linux环境搭建方式"><a href="#1-Linux环境搭建方式" class="headerlink" title="1. Linux环境搭建方式"></a>1. Linux环境搭建方式</h2><p>在搭建 <code>Linux</code> 环境时，可以选择以下几种方式，每种方式各有优缺点，适合不同的使用场景：  </p>
+<ol>
+<li><p><strong>直接安装在物理机上</strong><br>这是最原生的方式，适用于希望深度体验 <code>Linux</code> 系统的用户。然而，对于习惯了 <code>Windows</code> 的新手来说，可能会在日常操作中遇到一些不便，例如软件兼容性、驱动适配等问题。因此，如果没有特别的需求，直接在物理机上安装 <code>Linux</code> 可能不是最优解</p>
+</li>
+<li><p><strong>使用虚拟机</strong><br>通过虚拟机软件（如 <code>VMware</code>、<code>VirtualBox</code>）在 <code>Windows</code> 或 <code>macOS</code> 上运行 <code>Linux</code>，可以在不影响原系统的情况下体验 <code>Linux</code> 环境。这种方式适合希望灵活切换操作系统的用户。然而，虚拟机可能会遇到一些兼容性问题，如网络配置、硬件加速等，对于新手来说可能会带来额外的技术挑战，因此不太推荐  </p>
+</li>
+<li><p><strong>使用云服务器</strong><br>直接购买云服务器（如腾讯云、阿里云、华为云等）是一种简单高效的方式。云服务器无需繁琐的安装与配置，只需远程连接即可使用，几乎是“无脑操作”，特别适合初学者。此外，在云服务器上部署项目后，可以直接通过公网访问，这与企业级的服务器部署方式类似，使你的程序能够真正面向外部用户提供服务。如果你是学生，可以先进行学生认证，以获得云厂商提供的专属优惠，大幅降低成本</p>
+</li>
+</ol>
+<h2 id="2-云服务器搭建Linux环境"><a href="#2-云服务器搭建Linux环境" class="headerlink" title="2. 云服务器搭建Linux环境"></a>2. 云服务器搭建Linux环境</h2><p>这里以华为云为例，其他厂商类似</p>
+<ol>
+<li>进入官网，<a target="_blank" rel="noopener" href="https://www.huaweicloud.com/s/JUZsZXh1c-S6keacjeWKoeWZqFjlrp7kvosl">华为云-Flexus云服务器X实例</a><br> <img src="/../../image/%E5%88%9D%E8%AF%86Linux/1743421299975.png" srcset="/img/loading.gif" lazyload alt="alt text"><br> <img src="/../../image/%E5%88%9D%E8%AF%86Linux/1743421327200.png" srcset="/img/loading.gif" lazyload alt="alt text"><br> 学生可以在个人中心进学生认证<br> <img src="/../../image/%E5%88%9D%E8%AF%86Linux/1743421431557.png" srcset="/img/loading.gif" lazyload alt="alt text"><br> 也可以在官网搜索包含校园的关键词，看看有没有活动<br><a target="_blank" rel="noopener" href="https://activity.huaweicloud.com/discount_area_v5/index.html?fromacct=2a6390b0d917492c8f446df8c5efd02f&utm_source=eWl0aWFuXzVzYWQ==&utm_medium=cps&utm_campaign=201905">推广一下</a></li>
+<li>开始购买<br> <img src="/../../image/%E5%88%9D%E8%AF%86Linux/1743422095825.png" srcset="/img/loading.gif" lazyload alt="alt text"></li>
+<li>购买完成之后，进入控制台<br> <img src="/../../image/%E5%88%9D%E8%AF%86Linux/1743422272316.png" srcset="/img/loading.gif" lazyload alt="alt text"><br> 就能看到购买的Flexus云服务器X实例了<br> <img src="/../../image/%E5%88%9D%E8%AF%86Linux/1743422363346.png" srcset="/img/loading.gif" lazyload alt="alt text"><br> <img src="/../../image/%E5%88%9D%E8%AF%86Linux/1743422607123.png" srcset="/img/loading.gif" lazyload alt="alt text"></li>
+<li>重置 <code>root</code> 密码，稍后远程登录的时候会用到密码，建议将这个密码设置的稍微复杂一些<br> <img src="/../../image/%E5%88%9D%E8%AF%86Linux/1743422784943.png" srcset="/img/loading.gif" lazyload alt="alt text"></li>
+</ol>
+<p> 上述工作完成之后，就只差远程登录了</p>
+<h1 id="3-使用XShell-远程登录到Linux"><a href="#3-使用XShell-远程登录到Linux" class="headerlink" title="3 使用XShell 远程登录到Linux"></a>3 使用XShell 远程登录到Linux</h1><h2 id="1-下载安装XShell"><a href="#1-下载安装XShell" class="headerlink" title="1. 下载安装XShell"></a>1. 下载安装XShell</h2><ol>
+<li><code>XShell</code> 是一个远程终端软件，下载官网<a target="_blank" rel="noopener" href="https://www.xshell.com/zh/free-for-home-school/">XShell</a></li>
+</ol>
+<h2 id="2查看Linux主机IP"><a href="#2查看Linux主机IP" class="headerlink" title="2查看Linux主机IP"></a>2查看Linux主机IP</h2><p> 主机 <code>IP</code> 就是上面说的公网 <code>IP</code></p>
+<h2 id="3-使用XShell登录主机"><a href="#3-使用XShell登录主机" class="headerlink" title="3 使用XShell登录主机"></a>3 使用XShell登录主机</h2><p>  在 <code>XShell</code> 下输入<code>ssh root@IP</code>,初次登陆时候，使用 <code>root</code> 登录，后面会切换用户，输入前面设置过的密码，就可以了<br>  <img src="/../../image/%E5%88%9D%E8%AF%86Linux/1743423314889.png" srcset="/img/loading.gif" lazyload alt="alt text"><br>  显示下面信息，就成功了，<br>  <img src="/../../image/%E5%88%9D%E8%AF%86Linux/1743423529165.png" srcset="/img/loading.gif" lazyload alt="alt text"></p>
+<h3 id="3-1-XShell免密登录"><a href="#3-1-XShell免密登录" class="headerlink" title="3.1 XShell免密登录"></a>3.1 XShell免密登录</h3><p>打开 <code>Xshell</code> 点击新建会话<br><img src="/image/%E5%88%9D%E8%AF%86Linux/1744284842586.png" srcset="/img/loading.gif" lazyload alt="1744284842586"><br>设置好名字和公网 <code>IP</code><br><img src="/image/%E5%88%9D%E8%AF%86Linux/1744284978030.png" srcset="/img/loading.gif" lazyload alt="1744284978030"><br>关闭 <code>XShell</code> 之后再打开，就会看到设置的会话名称，点进去，输入登录名(默认是 <code>root</code>)，输入密码就可以进行登录(输入的时候选择记住账号和密码就可以直接登录云服务器了)，以后使用的时候直接点击就可以了</p>
+
+
+  
+
+</article>
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">Keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">Blog works best with JavaScript enabled</div>
+  </noscript>
+</body>
+</html>
