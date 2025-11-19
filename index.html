@@ -31,7 +31,111 @@
     <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
 <meta name="generator" content="Hexo 8.1.1"></head>
 <body>
-    <a id="cover"></a>
+    <div id="cover">
+    <link href="/2222111958/style/index.css" rel="stylesheet">
+    <div id="outer">
+        <div class="bg" id="bg"></div>
+        <div class="main" id="main">
+            <div class="clock-outer" id="clockOuter">
+                <div class="clock-num" id="clockNum">
+                    <div class="clock-num__time">
+                        <div id="clockNumH"></div>:
+                        <div id="clockNumM"></div>:
+                        <div id="clockNumS"></div>
+                    </div>
+                    <div id="clockNumD"></div>
+                </div>
+                <div class="clock">
+                    <div class="clock-center">
+                        <div class="clock-anchor">
+                            <div class="clock-minute-line--long"></div>
+                        </div>
+                        <div class="clock-anchor" style="transform: rotate(90deg)">
+                            <div class="clock-minute-line--long"></div>
+                        </div>
+                        <div class="clock-anchor" style="transform: rotate(180deg)">
+                            <div class="clock-minute-line--long"></div>
+                        </div>
+                        <div class="clock-anchor" style="transform: rotate(-90deg)">
+                            <div class="clock-minute-line--long"></div>
+                        </div>
+                        <div class="clock-anchor" style="transform: rotate(30deg)">
+                            <div class="clock-minute-line"></div>
+                        </div>
+                        <div class="clock-anchor" style="transform: rotate(60deg)">
+                            <div class="clock-minute-line"></div>
+                        </div>
+                        <div class="clock-anchor" style="transform: rotate(120deg)">
+                            <div class="clock-minute-line"></div>
+                        </div>
+                        <div class="clock-anchor" style="transform: rotate(150deg)">
+                            <div class="clock-minute-line"></div>
+                        </div>
+                        <div class="clock-anchor" style="transform: rotate(-30deg)">
+                            <div class="clock-minute-line"></div>
+                        </div>
+                        <div class="clock-anchor" style="transform: rotate(-60deg)">
+                            <div class="clock-minute-line"></div>
+                        </div>
+                        <div class="clock-anchor" style="transform: rotate(-120deg)">
+                            <div class="clock-minute-line"></div>
+                        </div>
+                        <div class="clock-anchor" style="transform: rotate(-150deg)">
+                            <div class="clock-minute-line"></div>
+                        </div>
+                        <div class="clock-anchor" id="hourHand">
+                            <div class="clock-hour-hand"></div>
+                        </div>
+                        <div class="clock-anchor" id="minuteHand">
+                            <div class="clock-minute-hand"></div>
+                        </div>
+                        <div class="clock-anchor" id="secondHand">
+                            <div class="clock-second-hand"></div>
+                        </div>
+                        <div class="clock-anchor">
+                            <div class="clock-dot hour"></div>
+                        </div>
+                        <div class="clock-anchor">
+                            <div class="clock-dot minute"></div>
+                        </div>
+                        <div class="clock-anchor">
+                            <div class="clock-dot hour"></div>
+                        </div>
+                        <div class="clock-anchor">
+                            <div class="clock-dot second"></div>
+                        </div>
+                        <div class="clock-anchor">
+                            <div class="clock-dot center"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="title">
+                <div class="title__target" id="title"></div>
+            </div>
+            <div class="body--end" id="bodyEnd">
+                <div class="message">
+                </div>
+                <div class="signature"></div>
+            </div>
+            <div class="body" id="body">
+                <div class="timer" id="timer">
+                    <div class="number days" id="days"></div>
+                    <div class="seperate" id="daySep"></div>
+                    <div class="number hours" id="hours"></div>
+                    <div class="seperate" id="hourSep"></div>
+                    <div class="number minutes" id="minutes"></div>
+                    <div class="seperate" id="minSep"></div>
+                    <div class="number seconds" id="seconds"></div>
+                    <div class="seperate" id="secSep"></div>
+                    <div class="number milliseconds" id="milliseconds"></div>
+                </div>
+                <div class="motto" id="motto"></div>
+            </div>
+        </div>
+    </div>
+    <script src="/2222111958/main.js" type="module"></script>
+</div>
     <link type="text/css" rel="stylesheet" href="/css/index.css">
 <div id="count"></div>
 <div id="header" >
@@ -55,35 +159,6 @@
         
             <!-- 首页 -->
             <div class="articles">
-                
-                    <div class="article">
-                        <div class="article-title">
-                            <a href="/2025/11/18/image/Linux%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4/"></a>
-                            
-                        </div>
-                        <div class="article-abstract">
-                            
-                        </div>
-                        <div class="clear"></div>
-                        <div class="article-info">
-                            <span>
-                                <i class="iconfont icon-time"></i> 发表时间：2025-11-18
-                            </span>
-                            
-                                
-                                    <span id="/2025/11/18/image/Linux基础指令/" class="leancloud_visitors" data-flag-title="">
-                                        <i class="iconfont icon-browse"></i> 阅读：<sapn class="leancloud-visitors-count"></span>
-                                    </span>
-                                
-                                
-                                    <span>
-                                        <i class="iconfont icon-interactive"></i> 评论：<span class="valine-comment-count" data-xid="/2025/11/18/image/Linux基础指令/"></span>
-                                    </span>
-                                
-                            
-                        </div>
-                        <div class="clear"></div>     
-                    </div>
                 
                     <div class="article">
                         <div class="article-title">
@@ -392,9 +467,7 @@
 
         HomeHeaderImage : [
             
-                "/image/header/home.jpg",
-            
-                "/image/header/home.jpeg",
+                "",
             
         ],
         HomeBannerText  : "",

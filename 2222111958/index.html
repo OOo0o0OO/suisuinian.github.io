@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta charset="UTF-8">
+  <link href="style/index.css" rel="stylesheet">
+  <link rel="manifest" href="./manifest.json">
+  <style id="maskStyle">
+  </style>
+</head>
+
+<body>
+  <div id="outer">
+    <div class="bg" id="bg"></div>
+
+    <div class="main" id="main">
+      <div class="clock-outer" id="clockOuter">
+        <div class="clock-num" id="clockNum">
+          <div class="clock-num__time">
+            <div id="clockNumH">20</div>:
+            <div id="clockNumM">47</div>:
+            <div id="clockNumS">33</div>
+          </div>
+          <div id="clockNumD"></div>
+        </div>
+        <div class="clock">
+          <div class="clock-center">
+
+            <div class="clock-anchor">
+              <div class="clock-minute-line--long"></div>
+            </div>
+            <div class="clock-anchor" style="transform: rotate(90deg)">
+              <div class="clock-minute-line--long"></div>
+            </div>
+            <div class="clock-anchor" style="transform: rotate(180deg)">
+              <div class="clock-minute-line--long"></div>
+            </div>
+            <div class="clock-anchor" style="transform: rotate(-90deg)">
+              <div class="clock-minute-line--long"></div>
+            </div>
+            <div class="clock-anchor" style="transform: rotate(30deg)">
+              <div class="clock-minute-line"></div>
+            </div>
+            <div class="clock-anchor" style="transform: rotate(60deg)">
+              <div class="clock-minute-line"></div>
+            </div>
+            <div class="clock-anchor" style="transform: rotate(120deg)">
+              <div class="clock-minute-line"></div>
+            </div>
+            <div class="clock-anchor" style="transform: rotate(150deg)">
+              <div class="clock-minute-line"></div>
+            </div>
+            <div class="clock-anchor" style="transform: rotate(-30deg)">
+              <div class="clock-minute-line"></div>
+            </div>
+            <div class="clock-anchor" style="transform: rotate(-60deg)">
+              <div class="clock-minute-line"></div>
+            </div>
+            <div class="clock-anchor" style="transform: rotate(-120deg)">
+              <div class="clock-minute-line"></div>
+            </div>
+            <div class="clock-anchor" style="transform: rotate(-150deg)">
+              <div class="clock-minute-line"></div>
+            </div>
+            <div class="clock-anchor" id="hourHand">
+              <div class="clock-hour-hand"></div>
+            </div>
+
+            <div class="clock-anchor" id="minuteHand">
+              <div class="clock-minute-hand"></div>
+            </div>
+
+            <div class="clock-anchor" id="secondHand">
+              <div class="clock-second-hand"></div>
+            </div>
+            <div class="clock-anchor">
+              <div class="clock-dot hour"></div>
+            </div>
+            <div class="clock-anchor">
+              <div class="clock-dot minute"></div>
+            </div>
+
+            <div class="clock-anchor">
+              <div class="clock-dot hour"></div>
+            </div>
+            <div class="clock-anchor">
+              <div class="clock-dot second"></div>
+            </div>
+            <div class="clock-anchor">
+              <div class="clock-dot center"></div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+      <div class="title">
+        <div class="title__target" id="title">2021</div>
+      </div>
+      <div class="body--end" id="bodyEnd">
+        <div class="message">
+          凡是过往，皆为序章。每一粒熬过冬天的种子，都有一个关于春天的梦想。我们扎根于这个伟大的国度，无畏一切考验的淬炼，
+          因为这是我们的梦想之地，哪怕荆棘仍在，依然通向山顶，值得我们不停脚步，值得我们咬牙坚持。
+        </div>
+        <div class="signature">—— 祝 <span id="targetYearEnd"></span> 乘风破浪!</div>
+      </div>
+      <div class="body" id="body">
+        <div class="timer" id="timer">
+          <div class="number days" id="days"></div>
+          <div class="seperate" id="daySep">天</div>
+          <div class="number hours" id="hours"></div>
+          <div class="seperate" id="hourSep">时</div>
+          <div class="number minutes" id="minutes"></div>
+          <div class="seperate" id="minSep">分</div>
+          <div class="number seconds" id="seconds"></div>
+          <div class="seperate" id="secSep">秒</div>
+          <div class="number milliseconds" id="milliseconds"></div>
+        </div>
+        <div class="motto" id="motto">不积跬步无以至千里</div>
+      </div>
+    </div>
+  </div>
+  <script src="./main.js" type="module"></script>
+  <!-- <script src="./sw.js"></script> -->
+</body>
+
+</html>
