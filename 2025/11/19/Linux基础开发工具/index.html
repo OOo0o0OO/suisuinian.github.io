@@ -1,0 +1,2200 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, shrink-to-fit=no">
+    <meta name="referrer" content="origin">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <title>
+        
+            Linux基础开发工具
+        
+    </title>
+    <link rel="shortcut icon" href="#"/>
+
+    <link type="text/css" rel="stylesheet" href="/font/LongCang.css">
+    <link type="text/css" rel="stylesheet" href="/font/Monda.css">
+    <link type="text/css" rel="stylesheet" href="/font/NotoSansSC.css">
+    <link type="text/css" rel="stylesheet" href="/font/NotoSerifSC.css">
+    <link type="text/css" rel="stylesheet" href="/font/Playball.css">
+    <link type="text/css" rel="stylesheet" href="/font/PTMono.css">
+    <link type="text/css" rel="stylesheet" href="/font/Roboto.css">
+    <link type="text/css" rel="stylesheet" href="/font/RobotoSlab.css">
+    <link type="text/css" rel="stylesheet" href="/font/Rosario.css">
+    <link type="text/css" rel="stylesheet" href="/font/UbuntuMono.css">
+
+    <link type="text/css" rel="stylesheet" href="/css/base.css">
+    <link type="text/css" rel="stylesheet" href="/css/code.css">
+
+    <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+<meta name="generator" content="Hexo 8.1.1"></head>
+<body>
+    <div id="cover">
+    <link href="/2222111958/style/index.css" rel="stylesheet">
+    <div id="outer">
+        <div class="bg" id="bg"></div>
+        <div class="main" id="main">
+            <div class="clock-outer" id="clockOuter">
+                <div class="clock-num" id="clockNum">
+                    <div class="clock-num__time">
+                        <div id="clockNumH"></div>:
+                        <div id="clockNumM"></div>:
+                        <div id="clockNumS"></div>
+                    </div>
+                    <div id="clockNumD"></div>
+                </div>
+                <div class="clock">
+                    <div class="clock-center">
+                        <div class="clock-anchor">
+                            <div class="clock-minute-line--long"></div>
+                        </div>
+                        <div class="clock-anchor" style="transform: rotate(90deg)">
+                            <div class="clock-minute-line--long"></div>
+                        </div>
+                        <div class="clock-anchor" style="transform: rotate(180deg)">
+                            <div class="clock-minute-line--long"></div>
+                        </div>
+                        <div class="clock-anchor" style="transform: rotate(-90deg)">
+                            <div class="clock-minute-line--long"></div>
+                        </div>
+                        <div class="clock-anchor" style="transform: rotate(30deg)">
+                            <div class="clock-minute-line"></div>
+                        </div>
+                        <div class="clock-anchor" style="transform: rotate(60deg)">
+                            <div class="clock-minute-line"></div>
+                        </div>
+                        <div class="clock-anchor" style="transform: rotate(120deg)">
+                            <div class="clock-minute-line"></div>
+                        </div>
+                        <div class="clock-anchor" style="transform: rotate(150deg)">
+                            <div class="clock-minute-line"></div>
+                        </div>
+                        <div class="clock-anchor" style="transform: rotate(-30deg)">
+                            <div class="clock-minute-line"></div>
+                        </div>
+                        <div class="clock-anchor" style="transform: rotate(-60deg)">
+                            <div class="clock-minute-line"></div>
+                        </div>
+                        <div class="clock-anchor" style="transform: rotate(-120deg)">
+                            <div class="clock-minute-line"></div>
+                        </div>
+                        <div class="clock-anchor" style="transform: rotate(-150deg)">
+                            <div class="clock-minute-line"></div>
+                        </div>
+                        <div class="clock-anchor" id="hourHand">
+                            <div class="clock-hour-hand"></div>
+                        </div>
+                        <div class="clock-anchor" id="minuteHand">
+                            <div class="clock-minute-hand"></div>
+                        </div>
+                        <div class="clock-anchor" id="secondHand">
+                            <div class="clock-second-hand"></div>
+                        </div>
+                        <div class="clock-anchor">
+                            <div class="clock-dot hour"></div>
+                        </div>
+                        <div class="clock-anchor">
+                            <div class="clock-dot minute"></div>
+                        </div>
+                        <div class="clock-anchor">
+                            <div class="clock-dot hour"></div>
+                        </div>
+                        <div class="clock-anchor">
+                            <div class="clock-dot second"></div>
+                        </div>
+                        <div class="clock-anchor">
+                            <div class="clock-dot center"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="title">
+                <div class="title__target" id="title"></div>
+            </div>
+            <div class="body--end" id="bodyEnd">
+                <div class="message">
+                </div>
+                <div class="signature"></div>
+            </div>
+            <div class="body" id="body">
+                <div class="timer" id="timer">
+                    <div class="number days" id="days"></div>
+                    <div class="seperate" id="daySep"></div>
+                    <div class="number hours" id="hours"></div>
+                    <div class="seperate" id="hourSep"></div>
+                    <div class="number minutes" id="minutes"></div>
+                    <div class="seperate" id="minSep"></div>
+                    <div class="number seconds" id="seconds"></div>
+                    <div class="seperate" id="secSep"></div>
+                    <div class="number milliseconds" id="milliseconds"></div>
+                </div>
+                <div class="motto" id="motto"></div>
+            </div>
+        </div>
+    </div>
+    <script src="/2222111958/main.js" type="module"></script>
+</div>
+    <link type="text/css" rel="stylesheet" href="/css/post.css">
+<div id="header" class="header">
+    <div class="vertical">
+        <div class="inner">
+            
+                <h1 class="header-subtitle">Linux基础开发工具</h1>
+                <div class="header-subinfo">
+                    <p class="article-info-text">
+                        <span>
+                            <i class="iconfont icon-time"></i> 发表时间：2025-11-19
+                        </span>
+                        
+                            
+                                <span id="/2025/11/19/Linux基础开发工具/" class="leancloud_visitors" data-flag-title="Linux基础开发工具">
+                                    <i class="iconfont icon-browse"></i> 阅读：<sapn class="leancloud-visitors-count"></span>
+                                </span>
+                            
+                            
+                                <span>
+                                    <i class="iconfont icon-interactive"></i> 评论：<span class="valine-comment-count" data-xid="/2025/11/19/Linux基础开发工具/"></span>
+                                </span>
+                              
+                        
+                    </p>
+                    
+                    
+                </div>
+            
+        </div>
+    </div>
+    
+</div>
+<div id="container">
+    
+        <!-- 文章页面 -->
+        <div id="article">
+            <div class="toc"></div>
+            <div class="article-body">
+                <meta name="referrer" content="no-referrer"/>
+
+<h2 id="基础开发工具"><a href="#基础开发工具" class="headerlink" title="基础开发工具"></a>基础开发工具</h2><h3 id="1-软件包管理器"><a href="#1-软件包管理器" class="headerlink" title="1. 软件包管理器"></a>1. 软件包管理器</h3><h4 id="1-1-Linux软件安装发展过程"><a href="#1-1-Linux软件安装发展过程" class="headerlink" title="1.1 Linux软件安装发展过程"></a>1.1 Linux软件安装发展过程</h4><ul>
+<li>最初，开源社区完全依赖手动编译源码的方式获取软件，用户需自行下载压缩包、解决依赖关系并执行编译安装，这种方式虽高度灵活却效率低下，尤其在处理复杂的依赖链时举步维艰(现在使用的 <code>Makefile</code> 就是当时的遗留痕迹)</li>
+<li>随着 <code>Linux</code> 发行版的兴起，<code>1990</code> 年代中期诞生的静态软件包（如 <code>Debian</code> 的 <code>deb</code> 和 <code>Red Hat</code> 的 <code>rpm</code>）首次引入元数据概念，通过预编译二进制文件和基础依赖描述简化了安装流程，但依赖冲突问题仍未彻底解决</li>
+<li><code>1998</code> 年 <code>APT</code> 与 <code>2003</code> 年 <code>YUM</code> 等智能包管理器的出现，标志着依赖解析技术的突破，它们通过算法自动下载所需依赖包，并建立本地软件数据库，实现了软件安装、升级、卸载的全生命周期管理</li>
+<li>进入21世纪后，软件生态的复杂化催生了容器化革命，<code>Docker</code> 等工具通过封装应用及其完整运行环境，以镜像形式实现跨平台的标准化部署，彻底解决了”在我机器上能运行”的经典难题</li>
+</ul>
+<h4 id="1-2-软件包和软件包管理器"><a href="#1-2-软件包和软件包管理器" class="headerlink" title="1.2 软件包和软件包管理器"></a>1.2 软件包和软件包管理器</h4><p><strong>软件包</strong>：预编译的应用程序及其数据，包括：二进制文件、配置文件、安装&#x2F;卸载脚本等。常见的软件包格式有 </p>
+<ul>
+<li>Debian&#x2F;Ubuntu：<code>.deb</code></li>
+<li>RHEL&#x2F;Fedora：<code>.rpm</code></li>
+<li>Arch Linux：<code>.pkg</code><br><strong>软件包管理器</strong>：类似于手机上的应用商店，具有自动处理软件包之间的依赖关系、支持多版本共存与升级回滚、验证软件包来源等功能。常见的软件包管理器有：</li>
+<li><code>Debian</code>&#x2F;<code>Ubuntu</code>：<code>APT</code>(<code>Advanced Package Tool</code>)</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">apt update                  <span class="comment"># 刷新仓库索引</span></span><br><span class="line">apt install nginx           <span class="comment"># 安装软件包</span></span><br><span class="line">apt remove --purge nginx    <span class="comment"># 完全卸载</span></span><br><span class="line">apt-cache show nginx        <span class="comment"># 查看包信息</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>RHEL</code>&#x2F;<code>Fedora</code>：<code>DNF</code>&#x2F;<code>YUM</code></li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">dnf makecache               <span class="comment"># 生成元数据缓存</span></span><br><span class="line">dnf install httpd           <span class="comment"># 安装软件包</span></span><br><span class="line">yum install httpd</span><br><span class="line">yum update</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>Arch Linux</code>：<code>Pacman</code></li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pacman -Syu                 <span class="comment"># 升级全部软件包</span></span><br><span class="line">pacman -Qs ^linux           <span class="comment"># 正则搜索本地包</span></span><br><span class="line">pacman -U package.pkg.tar.zst <span class="comment"># 手动安装本地包</span></span><br></pre></td></tr></table></figure>
+
+<p>查看软件包(<code>lrzsz</code> 是一个方便 <code>Linux</code> 服务器与本地之间进行小文件传输的工具)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ apt search lrzsz</span><br><span class="line">Sorting... Done</span><br><span class="line">Full Text Search... Done</span><br><span class="line">cutecom/noble 0.51.0-1build2 amd64</span><br><span class="line">  Graphical serial terminal, like minicom</span><br><span class="line"></span><br><span class="line">lrzsz/noble,now 0.12.21-11build1 amd64 [installed]</span><br><span class="line">  Tools <span class="keyword">for</span> zmodem/xmodem/ymodem file transfer</span><br><span class="line"></span><br><span class="line">$ </span><br></pre></td></tr></table></figure>
+<p>注：</p>
+<ul>
+<li><code>yum</code>&#x2F;<code>apt</code> 安装软件时只能一个装完再装另一个，正在 <code>yum</code>&#x2F;<code>apt</code> 安装软件时，在尝试使用 <code>yum</code>&#x2F;<code>apt</code> 安装另一个软件会报错</li>
+</ul>
+<h4 id="1-3-安装源"><a href="#1-3-安装源" class="headerlink" title="1.3 安装源"></a>1.3 安装源</h4><p><strong>安装源</strong>（软件仓库&#x2F;软件源）是操作系统获取软件包的核心渠道。不同发行版使用不同的包管理工具和配置文件，但核心逻辑类似</p>
+<p>安装源类型</p>
+<ul>
+<li>官方仓库：由发行版维护，稳定性高(如 <code>Ubuntu</code> 的 <code>main</code>、<code>CentOS</code> 的 <code>base</code>)</li>
+<li>第三方仓库：<code>PPA</code>(<code>Ubuntu</code>)：个人打包的软件集合(<code>ppa</code>:<code>user</code>&#x2F;<code>repo</code>)、<code>EPEL</code>(<code>CentOS</code>)：扩展包仓库</li>
+<li>本地仓库：通过 <code>ISO</code> 镜像或本地路径安装(适用于无网络环境)</li>
+<li>网络镜像：加速下载的镜像站点(如清华、中科大镜像源)<br> <code>Ubuntu</code> 下的 <code>APT</code> 安装源配置文件</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cat</span> /etc/apt/sources.list.d/ubuntu.sources </span><br><span class="line">Types: deb</span><br><span class="line">URIs: http://repo.huaweicloud.com/ubuntu</span><br><span class="line">Suites: noble noble-updates noble-backports</span><br><span class="line">Components: main restricted universe multiverse</span><br><span class="line">Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg</span><br><span class="line"></span><br><span class="line">Types: deb</span><br><span class="line">URIs: http://repo.huaweicloud.com/ubuntu</span><br><span class="line">Suites: noble-security</span><br><span class="line">Components: main restricted universe multiverse</span><br><span class="line">Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg</span><br><span class="line">$ </span><br></pre></td></tr></table></figure>
+
+<h3 id="2-编辑器vim"><a href="#2-编辑器vim" class="headerlink" title="2. 编辑器vim"></a>2. 编辑器vim</h3><p><code>Vim(Vi IMproved)</code> 是一款高度可定制、跨平台的文本编辑器，是经典 <code>Unix</code> 编辑器 <code>Vi</code> 的增强版</p>
+<p><code>Vim</code>（<strong>Vi IMproved</strong>）是一款高度可定制、跨平台的文本编辑器，是经典 <code>Unix</code> 编辑器 <strong><code>Vi</code></strong> 的增强版。它以<strong>键盘操作</strong>为核心，凭借高效的工作流和强大的扩展性，成为开发者、系统管理员等技术人员的常用工具</p>
+<p><strong>核心特点</strong></p>
+<ol>
+<li><p><strong>模式化编辑</strong>：</p>
+<ul>
+<li><strong>普通模式（Normal Mode）</strong>：移动光标、执行命令（默认进入的模式）</li>
+<li><strong>插入模式（Insert Mode）</strong>：输入文本（按 <code>i</code> 进入，<code>Esc</code> 返回普通模式）</li>
+<li><strong>可视模式（Visual Mode）</strong>：选择文本块（按 <code>v</code> 进入）</li>
+<li><strong>命令行模式（Command-line Mode）</strong>：执行保存、退出等命令（按 <code>:</code> 进入）</li>
+</ul>
+<!-- - ![1748252856439](image/基础开发工具/1748252856439.png) -->
+<ul>
+<li></li>
+</ul>
+</li>
+<li><p><strong>跨平台支持</strong>：</p>
+<ul>
+<li>支持 <code>Linux</code>、<code>macOS</code>、<code>Windows</code> 等主流操作系统</li>
+</ul>
+</li>
+<li><p><strong>高效操作</strong>：</p>
+<ul>
+<li>通过组合键（如 <code>d</code> + <code>w</code> 删除单词）实现快速编辑，减少鼠标依赖</li>
+</ul>
+</li>
+<li><p><strong>可扩展性</strong>：</p>
+<ul>
+<li>支持插件（如代码补全、语法检查）和自定义配置（通过 <code>.vimrc</code> 文件）</li>
+</ul>
+</li>
+</ol>
+<h4 id="2-1-vim-的核心操作"><a href="#2-1-vim-的核心操作" class="headerlink" title="2.1 vim 的核心操作"></a>2.1 vim 的核心操作</h4><p>输入 <code>vim &lt;文件名&gt;</code>，就进入 <code>vim</code> 全屏编辑页面<br><code>vim text.txt</code></p>
+<ul>
+<li>进入 <code>vim</code> 之后，处于普通模式下，要切换到插入模式才能输入</li>
+<li><strong>Esc 是万能钥匙：</strong> 在插入模式、视图模式、替换模式、命令行模式(取消输入时)下按 <code>Esc</code> 总是回到普通模式</li>
+<li>退出 <code>vim</code> 时，输入 <code>:</code><ul>
+<li><code>:w</code> 保存当前文件</li>
+<li><code>:wq</code> 保存并退出 <code>vim</code></li>
+<li><code>:q!</code> 不保存强制退出 <code>vim</code></li>
+</ul>
+</li>
+</ul>
+<h4 id="2-2-vim-命令"><a href="#2-2-vim-命令" class="headerlink" title="2.2 vim 命令"></a>2.2 vim 命令</h4><h5 id="2-2-1-模式转换"><a href="#2-2-1-模式转换" class="headerlink" title="2.2.1 模式转换"></a>2.2.1 模式转换</h5><p><strong>从普通模式 -&gt; 插入模式</strong></p>
+<ul>
+<li><code>i</code>: 在<strong>光标前</strong>插入 (<code>insert before cursor</code>)</li>
+<li><code>a</code>: 在<strong>光标后</strong>插入 (<code>append after cursor</code>)</li>
+<li><code>I</code>: 在<strong>行首</strong>插入 (<code>Insert at beginning of line</code>)</li>
+<li><code>A</code>: 在<strong>行尾</strong>插入 (<code>Append at end of line</code>)</li>
+<li><code>o</code>: 在<strong>当前行下方</strong>插入一个新行并进入插入模式 (<code>Open a new line below</code>)</li>
+<li><code>O</code>: 在<strong>当前行上方</strong>插入一个新行并进入插入模式 (<code>Open a new line above</code>)</li>
+<li><code>c</code> + <code>动作</code>： 更改文本（删除指定范围的文本并进入插入模式）。例如 <code>cw</code> 更改一个单词， <code>c$</code> 更改到行尾</li>
+<li><code>s</code>: 删除<strong>当前字符</strong>并进入插入模式 (<code>substitute character</code>)</li>
+<li><code>S</code>: 删除<strong>整行</strong>并进入插入模式 (<code>Substitute line</code>)</li>
+<li><code>C</code>: 删除<strong>从光标到行尾</strong>的文本并进入插入模式 (<code>Change to end of line</code>)</li>
+</ul>
+<p><strong>普通模式  -&gt; 可视化选择模式</strong></p>
+<ul>
+<li><strong>字符视图模式 (Visual Mode):</strong> 按字符选择文本。按 <code>v</code> 进入。这是最常用的视图模式</li>
+<li><strong>行视图模式 (Visual Line Mode):</strong> 按整行选择文本。按 <code>V</code> (大写) 进入。适合操作整行</li>
+<li><strong>块视图模式 (Visual Block Mode):</strong> 按矩形块选择文本（列选择）。按 <code>Ctrl+v</code> 进入。非常适合在多行文本的相同位置进行编辑（例如同时注释多行代码）</li>
+<li><strong>如何进入 (从普通模式)：</strong> <code>v</code>, <code>V</code>, <code>Ctrl+v</code></li>
+<li><strong>如何操作：</strong> 进入后，使用<strong>移动命令</strong>（<code>h</code>, <code>j</code>, <code>k</code>, <code>l</code>, <code>w</code>, <code>b</code>, <code>&#125;</code>, <code>0</code>, <code>$</code>, <code>gg</code>, <code>G</code> 等）来扩展或缩小选择区域</li>
+<li><strong>如何执行命令：</strong> 选择好文本后，按一个<strong>操作命令</strong>，<code>Vim</code> 会像在普通模式下一样执行该命令，但<strong>作用范围仅限于选中的文本</strong>。常用操作：<ul>
+<li><code>d</code> &#x2F; <code>x</code>: 删除选中文本 (<code>Cut</code>)</li>
+<li><code>y</code>: 复制选中文本 (<code>Yank</code>&#x2F;<code>Copy</code>)</li>
+<li><code>c</code>: 更改选中文本（删除并进入插入模式）</li>
+<li><code>&gt;</code>: 向右缩进选中文本</li>
+<li><code>&lt;</code>: 向左缩进选中文本</li>
+<li><code>~</code>: 切换选中文本的大小写</li>
+<li><code>u</code>: 将选中文本转为小写</li>
+<li><code>U</code>: 将选中文本转为大写</li>
+<li><code>:</code>: 对选中文本执行命令行命令（例如 <code>:&#39;&lt;,&#39;&gt;s/old/new/g</code> 在选中范围内替换）</li>
+</ul>
+</li>
+</ul>
+<p><strong>普通模式  -&gt; 命令行模式</strong></p>
+<ul>
+<li><code>:</code> 按 <code>:</code> (冒号)。光标会移动到屏幕底部，出现 <code>:</code> 提示符</li>
+<li>文件操作：<code>:w</code> (保存), <code>:w filename</code> (另存为), <code>:q</code> (退出), <code>:q!</code> (不保存强制退出), <code>:wq</code> 或 <code>:x</code> (保存并退出), <code>:e filename</code> (打开另一个文件)</li>
+<li>搜索和替换：<code>:/pattern</code> (向下搜索), <code>:?pattern</code> (向上搜索), <code>:%s/old/new/g</code> (全局替换), <code>:%s/old/new/gc</code> (全局替换并确认)</li>
+<li>设置选项：<code>:set number</code> (显示行号), <code>:set nonumber</code> (隐藏行号), <code>:set hlsearch</code> (高亮搜索结果), <code>:set nohlsearch</code> (取消高亮)</li>
+<li>执行外部命令：<code>:!command</code> (如 <code>:!ls</code>, <code>:!gcc %</code> 编译当前文件)</li>
+<li>其他高级操作：<code>:split</code> (水平分屏), <code>:vsplit</code> (垂直分屏), <code>:tabnew</code> (新建标签页), <code>:help</code> (查看帮助)</li>
+</ul>
+<p><strong>普通模式 -&gt; 替换模式 (Replace Mode)</strong></p>
+<ul>
+<li>一种特殊的插入模式</li>
+<li><strong>作用：</strong> <strong>覆盖 (替换) 已有的文本</strong>，而不是插入新文本。按一个键，会<strong>删除光标下的字符</strong>，然后插入你按的字符</li>
+<li><code>R</code>: 进入<strong>连续替换模式</strong>。之后输入的字符会逐个覆盖后面的原有字符</li>
+<li><code>r</code>: 后跟<strong>一个字符</strong>。仅替换<strong>当前光标下的一个字符</strong>，然后<strong>自动回到普通模式</strong>（<code>r</code> 本身不是模式，是一个命令）</li>
+</ul>
+<h5 id="2-2-2-常见命令"><a href="#2-2-2-常见命令" class="headerlink" title="2.2.2   常见命令"></a>2.2.2   常见命令</h5><p><strong>主要在普通模式下(按下就会执行)</strong></p>
+<ul>
+<li><code>d</code> &#x2F; <code>x</code>: 删除选中文本 (<code>Cut</code>)</li>
+<li><code>y</code>: 复制选中文本 (<code>Yank</code>&#x2F;<code>Copy</code>)</li>
+<li><code>c</code>: 更改选中文本（删除并进入插入模式）</li>
+<li><code>&gt;</code>: 向右缩进选中文本</li>
+<li><code>&lt;</code>: 向左缩进选中文本</li>
+<li><code>~</code>: 切换选中文本的大小写</li>
+<li><code>u</code>: 将选中文本转为小写</li>
+<li><code>U</code>: 将选中文本转为大写</li>
+<li><code>:</code>: 对选中文本执行命令行命令（例如 <code>:&#39;&lt;,&#39;&gt;s/old/new/g</code> 在选中范围内替换）</li>
+</ul>
+<p><strong>移动 (Navigation):</strong></p>
+<ul>
+<li><code>h</code> &#x2F; <code>←</code>: 左移</li>
+<li><code>j</code> &#x2F; <code>↓</code>: 下移一行</li>
+<li><code>k</code> &#x2F; <code>↑</code>: 上移一行</li>
+<li><code>l</code> &#x2F; <code>→</code>: 右移</li>
+<li><code>w</code> &#x2F; <code>W</code>: 移动到下一个单词&#x2F;大词 (词首)</li>
+<li><code>b</code> &#x2F; <code>B</code>: 移动到上一个单词&#x2F;大词 (词首)</li>
+<li><code>e</code> &#x2F; <code>E</code>: 移动到下一个单词&#x2F;大词 (词尾)</li>
+<li><code>0</code> &#x2F; <code>^</code> &#x2F; <code>$</code>: 移动到行首 &#x2F; 行首第一个非空白字符 &#x2F; 行尾</li>
+<li><code>gg</code>: 移动到文件第一行</li>
+<li><code>G</code>: 移动到文件最后一行</li>
+<li><code>:[行号]</code> + <code>Enter</code>: 跳转到指定行号 (e.g, <code>:42</code> 跳到第 <code>42</code> 行)</li>
+<li><code>Ctrl+f</code> &#x2F; <code>Page Down</code>: 向下翻一页</li>
+<li><code>Ctrl+b</code> &#x2F; <code>Page Up</code>: 向上翻一页</li>
+<li><code>Ctrl+d</code> &#x2F; <code>Ctrl+u</code>: 向下&#x2F;向上翻半页</li>
+<li><code>%</code>: 在匹配的括号 (<code>()</code>, <code>&#123;&#125;</code>, <code>[]</code>) 间跳转</li>
+<li><code>f[字符]</code> &#x2F; <code>F[字符]</code> &#x2F; <code>t[字符]</code> &#x2F; <code>T[字符]</code>: 在当前行查找字符并移动 (<code>f</code> 到字符上, <code>t</code> 到字符前, 大写表示反向)</li>
+</ul>
+<p><strong>编辑 (Editing):</strong></p>
+<ul>
+<li><code>i</code> &#x2F; <code>a</code> &#x2F; <code>o</code> &#x2F; <code>O</code> &#x2F; <code>I</code> &#x2F; <code>A</code> &#x2F; <code>s</code> &#x2F; <code>S</code> &#x2F; <code>c</code> &#x2F; <code>C</code>: 进入插入模式 (见上文)</li>
+<li><code>x</code> &#x2F; <code>dl</code>: 删除光标下的字符 (相当于 <code>Del</code>)</li>
+<li><code>X</code> &#x2F; <code>dh</code>: 删除光标前的字符 (相当于 <code>Backspace</code>)</li>
+<li><code>d[动作]</code>: 删除 (<code>Cut</code>) 文本 (<code>e.g</code>, <code>dw</code> 删一个单词, <code>d$</code> &#x2F; <code>D</code> 删到行尾, <code>dd</code> 删整行, <code>dG</code> 删到文件尾)</li>
+<li><code>y[动作]</code>: 复制 (<code>Yank</code>) 文本 (<code>e.g</code>, <code>yw</code> 复制一个单词, <code>y$</code> 复制到行尾, <code>yy</code> &#x2F; <code>Y</code> 复制整行, <code>yG</code> 复制到文件尾)</li>
+<li><code>p</code>: 在光标<strong>后</strong>粘贴 (小写 <code>p</code>)</li>
+<li><code>P</code>: 在光标<strong>前</strong>粘贴 (大写 <code>P</code>)</li>
+<li><code>u</code>: 撤销 (<code>Undo</code>)</li>
+<li><code>Ctrl+r</code>: 重做 (<code>Redo</code>) 撤销的操作</li>
+<li><code>.</code> (点): <strong>重复上一个编辑操作 (非常强大！)</strong></li>
+<li><code>r[字符]</code>: 替换当前光标下的一个字符 (单个字符替换命令)</li>
+<li><code>R</code>: 进入替换模式 (连续替换)</li>
+<li><code>~</code>: 切换当前光标下字符的大小写</li>
+</ul>
+<p><strong>搜索与替换 (Search &amp; Replace):</strong></p>
+<ul>
+<li><code>/pattern</code>: 向下搜索 <code>pattern</code> (正则表达式)</li>
+<li><code>?pattern</code>: 向上搜索 <code>pattern</code></li>
+<li><code>n</code>: 重复上一次搜索，相同方向</li>
+<li><code>N</code>: 重复上一次搜索，相反方向</li>
+<li><code>:%s/old/new/g</code>: 在整个文件中 (<code>%</code>) 将所有 <code>old</code> 替换为 <code>new</code> (<code>global</code>)</li>
+<li><code>:%s/old/new/gc</code>: 同上，但每次替换前询问确认 (<code>confirm</code>)</li>
+<li><code>:[行范围]s/old/new/g</code>: 在指定行范围内替换 (e.g., <code>:10,20s/foo/bar/g</code> 在 <code>10-20</code> 行替换)</li>
+</ul>
+<p><strong>文件与窗口 (File &amp; Window):</strong></p>
+<ul>
+<li><code>:w</code>: 保存文件</li>
+<li><code>:w filename</code>: 另存为 <code>filename</code></li>
+<li><code>:q</code>: 退出 <code>Vim</code> (如果文件未修改)</li>
+<li><code>:q!</code>: 不保存强制退出</li>
+<li><code>:wq</code> &#x2F; <code>:x</code> &#x2F; <code>ZZ</code> (普通模式): 保存并退出</li>
+<li><code>:e filename</code>: 编辑另一个文件 <code>filename</code></li>
+<li><code>:split</code> &#x2F; <code>:sp [filename]</code>: 水平分割窗口 (打开 <code>filename</code> 或当前文件)</li>
+<li><code>:vsplit</code> &#x2F; <code>:vsp [filename]</code>: 垂直分割窗口</li>
+<li><code>Ctrl+w</code> + <code>方向键</code> &#x2F; <code>h</code>&#x2F;<code>j</code>&#x2F;<code>k</code>&#x2F;<code>l</code>: 在窗口间切换</li>
+<li><code>Ctrl+w</code> + <code>c</code>: 关闭当前窗口</li>
+<li><code>:tabnew [filename]</code>: 在新标签页打开文件</li>
+<li><code>gt</code> &#x2F; <code>gT</code>: 切换到下一个 &#x2F; 上一个标签页</li>
+<li><code>:tabn</code> &#x2F; <code>:tabp</code>: 同上 (命令形式)</li>
+</ul>
+<p><strong>其他实用命令:</strong></p>
+<ul>
+<li><code>:set number</code> &#x2F; <code>:set nu</code>: 显示行号</li>
+<li><code>:set nonumber</code> &#x2F; <code>:set nonu</code>: 隐藏行号</li>
+<li><code>:set hlsearch</code> &#x2F; <code>:set hls</code>: 高亮所有搜索结果</li>
+<li><code>:set nohlsearch</code> &#x2F; <code>:set nohls</code>: 关闭搜索结果高亮</li>
+<li><code>:nohlsearch</code> &#x2F; <code>:noh</code>: 临时关闭当前搜索的高亮 (直到下次搜索)</li>
+<li><code>:help [topic]</code>: 查看帮助 (<code>e.g</code>, <code>:help w</code>, <code>:help :w</code>)</li>
+<li><code>Ctrl+g</code> &#x2F; <code>:f</code> &#x2F; <code>Ctrl+g</code>: 在底部显示当前文件名和光标位置信息</li>
+<li><code>#</code> : <code>#</code> 表示一个数字，在冒号后输入一个数字，再回车，就会跳转到对应的行数</li>
+</ul>
+<h4 id="2-3-vim的简单配置"><a href="#2-3-vim的简单配置" class="headerlink" title="2.3 vim的简单配置"></a>2.3 vim的简单配置</h4><p><strong>步骤 1：创建配置文件</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Linux/macOS</span></span><br><span class="line"><span class="built_in">touch</span> ~/.vimrc</span><br></pre></td></tr></table></figure>
+<p><strong>步骤 2：安装插件管理器 (vim-plug)</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Linux/macOS</span></span><br><span class="line">curl -fLo ~/.vim/autoload/plug.vim --create-dirs \</span><br><span class="line">https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim</span><br></pre></td></tr></table></figure>
+<p><strong>步骤 3：编辑配置文件</strong><br>打开 <code>~/.vimrc</code> (<code>Linux</code>&#x2F;<code>macOS</code>)，复制以下内容：</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&quot; === 基础设置 ===</span></span><br><span class="line"><span class="keyword">set</span> <span class="keyword">number</span>              <span class="comment">&quot; 显示行号</span></span><br><span class="line"><span class="keyword">set</span> tabstop=<span class="number">4</span>           <span class="comment">&quot; Tab宽度=4空格</span></span><br><span class="line"><span class="keyword">set</span> expandtab           <span class="comment">&quot; Tab转空格</span></span><br><span class="line"><span class="keyword">syntax</span> <span class="keyword">on</span>               <span class="comment">&quot; 语法高亮</span></span><br><span class="line"><span class="keyword">set</span> mouse=<span class="keyword">a</span>             <span class="comment">&quot; 启用鼠标</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&quot; === 插件管理 ===</span></span><br><span class="line"><span class="keyword">call</span> plug#begin(<span class="string">&#x27;~/.vim/plugged&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">&quot; 必备插件</span></span><br><span class="line">Plug <span class="string">&#x27;preservim/nerdtree&#x27;</span>        <span class="comment">&quot; 文件树</span></span><br><span class="line">Plug <span class="string">&#x27;vim-airline/vim-airline&#x27;</span>    <span class="comment">&quot; 状态栏</span></span><br><span class="line">Plug <span class="string">&#x27;tpope/vim-commentary&#x27;</span>       <span class="comment">&quot; 快速注释</span></span><br><span class="line">Plug <span class="string">&#x27;kien/ctrlp.vim&#x27;</span>             <span class="comment">&quot; 模糊搜索</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">call</span> plug#end()</span><br><span class="line"></span><br><span class="line"><span class="comment">&quot; === 插件配置 ===</span></span><br><span class="line"><span class="comment">&quot; NERDTree 文件树</span></span><br><span class="line"><span class="keyword">map</span> <span class="symbol">&lt;C-n&gt;</span> :NERDTreeToggle<span class="symbol">&lt;CR&gt;</span>     <span class="comment">&quot; Ctrl+n 开关</span></span><br><span class="line"><span class="keyword">let</span> NERDTreeShowHidden=<span class="number">1</span>           <span class="comment">&quot; 显示隐藏文件</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&quot; 快速注释</span></span><br><span class="line"><span class="keyword">nmap</span> gcc :Commentary<span class="symbol">&lt;CR&gt;</span>          <span class="comment">&quot; gcc 注释当前行</span></span><br><span class="line"><span class="keyword">vmap</span> gc :Commentary<span class="symbol">&lt;CR&gt;</span>           <span class="comment">&quot; 可视化模式注释选中行</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&quot; CtrlP 模糊搜索</span></span><br><span class="line"><span class="keyword">let</span> <span class="variable">g:ctrlp_map</span> = <span class="string">&#x27;&lt;c-p&gt;&#x27;</span>          <span class="comment">&quot; Ctrl+p 搜索文件</span></span><br></pre></td></tr></table></figure>
+<p><strong>步骤 4：安装插件</strong></p>
+<ol>
+<li>打开 <code>Vim</code></li>
+<li>执行命令：</li>
+</ol>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:PlugInstall</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>等待插件安装完成（状态栏显示 “Done”）</p>
+</blockquote>
+<p><strong>步骤 5：常用操作</strong></p>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>快捷键&#x2F;命令</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>打开文件树</td>
+<td><code>Ctrl + n</code></td>
+</tr>
+<tr>
+<td>注释当前行</td>
+<td><code>gcc</code></td>
+</tr>
+<tr>
+<td>搜索文件</td>
+<td><code>Ctrl + p</code></td>
+</tr>
+<tr>
+<td>保存文件</td>
+<td><code>:w</code></td>
+</tr>
+<tr>
+<td>退出 Vim</td>
+<td><code>:q</code></td>
+</tr>
+<tr>
+<td>重载配置</td>
+<td><code>:source ~/.vimrc</code></td>
+</tr>
+</tbody></table>
+<p><strong>选择主题</strong></p>
+<ol>
+<li>在 <code>call plug#begin</code> 后添加：</li>
+</ol>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Plug <span class="string">&#x27;joshdick/onedark.vim&#x27;</span>   <span class="comment">&quot; 主题插件</span></span><br></pre></td></tr></table></figure>
+<ol>
+<li>在文件末尾添加：</li>
+</ol>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">colorscheme</span> onedark           <span class="comment">&quot; 使用主题</span></span><br><span class="line"><span class="keyword">set</span> background=dark            <span class="comment">&quot; 深色模式</span></span><br></pre></td></tr></table></figure>
+<ol>
+<li>重载配置并安装：</li>
+</ol>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">:<span class="keyword">source</span> %</span><br><span class="line">:PlugInstall</span><br></pre></td></tr></table></figure>
+<p><strong>验证配置</strong><br>打开 <code>Vim</code> 测试：</p>
+<ul>
+<li>按 <code>Ctrl+n</code> 应出现文件树</li>
+<li>输入文本后按 <code>gcc</code> 应注释当前行</li>
+<li>按 <code>Ctrl+p</code> 应出现文件搜索框</li>
+</ul>
+<blockquote>
+<p>遇到问题执行 :PlugStatus查看插件状态<br>更新插件用 :PlugUpdate</p>
+</blockquote>
+<h3 id="3-编译器gcc-g"><a href="#3-编译器gcc-g" class="headerlink" title="3. 编译器gcc &#x2F;g++"></a>3. 编译器gcc &#x2F;g++</h3><h4 id="3-1-GCC-G-是什么？"><a href="#3-1-GCC-G-是什么？" class="headerlink" title="3.1 GCC &#x2F; G++ 是什么？"></a>3.1 GCC &#x2F; G++ 是什么？</h4><ol>
+<li><strong>GCC (GNU Compiler Collection):</strong></li>
+</ol>
+<ul>
+<li><strong>定义：</strong> <code>GCC</code> 最初代表 “GNU C Compiler”，但随着其支持语言的扩展，现在代表 “<strong>GNU Compiler Collection</strong>“ (<code>GNU</code> 编译器套件)</li>
+<li><strong>功能：</strong> 它是一个由 <code>GNU</code> 项目开发的、功能强大且广泛使用的<strong>编译器套件</strong>。它支持多种编程语言，最主要的是：<ul>
+<li><strong>C (<code>gcc</code>):</strong> 编译 <code>C</code> 语言程序</li>
+<li><strong>C++ (<code>g++</code>):</strong> 编译 <code>C++</code> 语言程序</li>
+<li>其他：<code>Fortran</code> (<code>gfortran</code>), <code>Ada</code> (<code>gnat</code>), <code>Go</code> (<code>gccgo</code>), <code>D</code> (<code>gdc</code>), <code>Objective-C</code>, <code>Objective-C++</code> 等</li>
+</ul>
+</li>
+<li><strong>跨平台：</strong> <code>GCC</code> 是<strong>跨平台</strong>的，可以在多种操作系统上运行，包括 <code>Linux</code>、<code>macOS</code> (通过 <code>Xcode Command Line Tools</code> 或 <code>Homebrew</code> 等)、<code>Windows</code> (通过 <code>MinGW</code>, <code>Cygwin</code>, <code>WSL</code> 等)</li>
+<li><strong>开源：</strong> 它是<strong>自由开源软件</strong> (<code>FOSS</code>)，遵循 <code>GPL</code> 许可证</li>
+<li><strong>核心作用：</strong> 将人类可读的<strong>高级语言源代码</strong> (如 <code>.c</code>, <code>.cpp</code> 文件) 转换成计算机可执行的<strong>机器码</strong>或中间代码</li>
+</ul>
+<ol>
+<li><strong>G++:</strong></li>
+</ol>
+<ul>
+<li><strong>定义：</strong> <code>g++</code> 是 <code>GCC</code> 编译器套件中专门用于编译 <strong>C++</strong> 源代码的程序</li>
+<li><strong>与 <code>gcc</code> 的关系：</strong><ul>
+<li><code>gcc</code> 和 <code>g++</code> 本质上是同一个<strong>驱动程序</strong> (<code>driver program</code>)。它们的主要区别在于<strong>默认行为</strong>和<strong>默认链接的库</strong></li>
+<li>当调用 <code>gcc</code> 时：<ul>
+<li>默认将文件视为 <strong><code>C</code></strong> 源代码</li>
+<li>默认在链接阶段<strong>只链接标准 <code>C</code> 库 (<code>libc</code>)</strong>, 不链接 <code>C++</code> 标准库 (<code>libstdc++</code>)</li>
+</ul>
+</li>
+<li>当调用 <code>g++</code> 时：<ul>
+<li>默认将文件 (如 <code>.c</code>, <code>.cpp</code>, <code>.cc</code>, <code>.C</code>) 视为 <strong>C++</strong> 源代码 (遵循特定后缀规则)</li>
+<li>默认在链接阶段<strong>链接 <code>C++</code> 标准库 (<code>libstdc++</code>)</strong>。这是编译 <code>C++</code> 程序所必需的</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="3-2-预处理-编译-汇编-链接"><a href="#3-2-预处理-编译-汇编-链接" class="headerlink" title="3.2 预处理 -&gt; 编译 -&gt; 汇编 -&gt; 链接"></a>3.2 预处理 -&gt; 编译 -&gt; 汇编 -&gt; 链接</h4><p>程序如何从文本变成可执行文件的过程可以分为：预处理 -&gt; 编译 -&gt; 汇编 -&gt; 链接。我们以一个简单的 <code>C</code> 程序 <code>hello.c</code> 为例：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> GREETING <span class="string">&quot;Hello, World!&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%s\n&quot;</span>, GREETING);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>阶段 1：预处理 (Preprocessing)</strong></p>
+<ul>
+<li><strong>工具：</strong> <code>cpp</code> (<code>C Preprocessor</code>)，通常由 <code>gcc -E</code> 或 <code>g++ -E</code> 调用</li>
+<li><strong>输入：</strong> 源代码文件 (<code>.c</code>, <code>.cpp</code>)</li>
+<li><strong>输出：</strong> <strong>预处理后的源代码</strong> (<code>.i</code> 或 <code>.ii</code> 文件，或直接输出到标准输出)</li>
+<li><strong>核心任务：</strong> 处理源代码中以 <code>#</code> 开头的<strong>预处理指令 (<code>preprocessor directives</code>)</strong>，对源代码进行<strong>文本级别</strong>的替换和修改</li>
+<li><strong>主要操作：</strong><ul>
+<li><strong>头文件包含 (<code>#include</code>)：</strong> 将被包含的文件（如 <code>stdio.h</code>）的内容<strong>复制并插入</strong>到 <code>#include</code> 指令所在的位置。这通常会导致代码量显著增加</li>
+<li><strong>宏展开 (<code>#define</code>)：</strong> 将所有定义的宏（如 <code>GREETING</code>）替换为其定义的值（<code>&quot;Hello, World!&quot;</code>）</li>
+<li><strong>条件编译 (<code>#ifdef</code>, <code>#ifndef</code>, <code>#if</code>, <code>#else</code>, <code>#elif</code>, <code>#endif</code>)：</strong> 根据给定的条件（通常是宏是否定义或表达式值）决定是否包含或排除某些代码块。这在编写跨平台代码或调试时非常有用</li>
+<li><strong>删除注释：</strong> 移除所有注释 (<code>//</code>, <code>/* ... */</code>)</li>
+<li><strong>处理特殊指令：</strong> 如 <code>#pragma</code>, <code>#line</code>, <code>#error</code> 等</li>
+</ul>
+</li>
+<li><strong>目的：</strong> 产生一个“纯净”的、不含预处理指令、宏已展开、头文件已包含的源代码文件，供真正的编译器使用</li>
+<li><strong>查看预处理结果：</strong>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gcc -E hello.c -o hello.i  <span class="comment"># 输出到 hello.i</span></span><br><span class="line">g++ -E hello.cpp -o hello.ii <span class="comment"># C++ 通常用 .ii</span></span><br></pre></td></tr></table></figure>
+  打开 <code>hello.i</code>，你会看到 <code>#include &lt;stdio.h&gt;</code> 被替换成了 <code>stdio.h</code> 中大量的函数声明和宏定义，<code>GREETING</code> 被替换成了 <code>&quot;Hello, World!&quot;</code>，注释也被删除了</li>
+</ul>
+<p><strong>阶段 2：编译 (Compilation)</strong></p>
+<ul>
+<li><strong>工具：</strong> 真正的编译器核心 (如 <code>cc1 for C</code>, <code>cc1plus for C++</code>)，通常由 <code>gcc -S</code> 或 <code>g++ -S</code> 调用</li>
+<li><strong>输入：</strong> 预处理后的源代码 (<code>.i</code> 或 <code>.ii</code> 文件，或直接来自上一步)</li>
+<li><strong>输出：</strong> <strong>汇编语言源代码</strong> (<code>.s</code> 文件)</li>
+<li><strong>核心任务：</strong> 将<strong>高级语言</strong> (<code>C</code>&#x2F;<code>C++</code>) 翻译成<strong>低级、与特定处理器架构相关的汇编语言</strong> (<code>Assembly Language</code>)</li>
+<li><strong>主要操作：</strong><ul>
+<li><strong>词法分析 (Lexical Analysis)：</strong> 将源代码字符流分解成有意义的词素 (<code>token</code>)，如关键字、标识符、常量、运算符等</li>
+<li><strong>语法分析 (Syntax Analysis &#x2F; Parsing)：</strong> 根据语法规则检查词素序列的结构，构建抽象语法树 (<code>Abstract Syntax Tree</code>, <code>AST</code>)。检查语法错误</li>
+<li><strong>语义分析 (Semantic Analysis)：</strong> 在 AST 上检查语义是否正确（如类型检查、变量声明检查、函数调用匹配等）。收集类型信息</li>
+<li><strong>中间代码生成 (Intermediate Code Generation)：</strong> (可选但常见) 生成一种独立于具体硬件架构的中间表示 (如 <code>GIMPLE</code>, <code>RTL in GCC</code>)，便于优化</li>
+<li><strong>优化 (Optimization)：</strong> 在中间代码或汇编代码级别进行各种优化，以提高程序的运行效率或减小其大小（如常量传播、死代码消除、循环优化、内联函数等）。优化级别可通过 <code>-O0</code> (不优化), <code>-O1</code>, <code>-O2</code>, <code>-O3</code>, <code>-Os</code> (优化大小) 等选项控制</li>
+<li><strong>目标代码生成 (Code Generation)：</strong> 将优化后的中间代码或直接从 <code>AST</code> 生成特定 <code>CPU</code> 架构的<strong>汇编语言指令</strong></li>
+</ul>
+</li>
+<li><strong>目的：</strong> 生成与机器指令一一对应的、人类（勉强）可读的低级表示（汇编代码）</li>
+<li><strong>查看编译结果 (生成汇编)：</strong>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">gcc -S hello.i -o hello.s  <span class="comment"># 从预处理文件编译</span></span><br><span class="line">gcc -S hello.c -o hello.s   <span class="comment"># gcc 会自动先预处理再编译</span></span><br><span class="line">g++ -S hello.cpp -o hello.s</span><br></pre></td></tr></table></figure>
+  打开 <code>hello.s</code>，你会看到类似 <code>movl</code>, <code>call</code>, <code>pushq</code>, <code>.section</code>, <code>.globl main</code> 等针对特定 <code>CPU</code> (如 <code>x86-64</code>) 的汇编指令</li>
+</ul>
+<p><strong>阶段 3：汇编 (Assembly)</strong></p>
+<ul>
+<li><strong>工具：</strong> <strong>汇编器 (Assembler)</strong>，如 <code>as</code></li>
+<li><strong>输入：</strong> 汇编语言源代码 (<code>.s</code> 文件)</li>
+<li><strong>输出：</strong> <strong>目标文件 (Object File)</strong> (<code>.o</code> 或 <code>.obj</code> 文件)</li>
+<li><strong>核心任务：</strong> 将<strong>汇编语言指令</strong>逐条翻译成对应的、处理器能够直接理解和执行的<strong>机器指令 (二进制码)</strong>，并将结果打包成目标文件格式</li>
+<li><strong>主要操作：</strong><ul>
+<li><strong>指令翻译：</strong> 将汇编助记符 (如 <code>mov</code>, <code>add</code>, <code>call</code>) 翻译成二进制机器码 (<code>Opcode</code>)</li>
+<li><strong>符号解析 (初步)：</strong> 记录代码中定义的符号（函数名、全局变量名）及其位置（地址），以及引用的外部符号（如 <code>printf</code>）</li>
+<li><strong>生成目标文件：</strong> 生成特定格式（如 <code>Linux</code>&#x2F;<code>Unix</code> 上的 <code>ELF</code> - <code>Executable and Linkable</code> <code>Format</code>, <code>Windows</code> 上的 <code>PE/COFF</code>）的目标文件。目标文件包含：<ul>
+<li>编译后的<strong>机器代码</strong> (<code> .text</code> 段)</li>
+<li><strong>初始化了的全局&#x2F;静态变量数据</strong> (<code> .data</code> 段)</li>
+<li><strong>未初始化 (或初始化为0) 的全局&#x2F;静态变量数据</strong> (<code> .bss</code> 段，在文件中只占位置标记，不占实际空间)</li>
+<li><strong>符号表 (Symbol Table)：</strong> 记录本文件中定义和引用的符号信息（名称、类型、大小、地址等）</li>
+<li><strong>重定位信息 (Relocation Information)：</strong> 记录文件中哪些位置在最终链接时需要用其他目标文件或库中符号的地址来修正</li>
+<li>调试信息 (可选，编译时加 <code>-g</code> 选项)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>目的：</strong> 生成包含机器码和元数据的<strong>可重定位目标文件</strong>，为链接阶段做准备</li>
+<li><strong>执行汇编：</strong>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">gcc -c hello.s -o hello.o  <span class="comment"># 从汇编文件汇编</span></span><br><span class="line">gcc -c hello.c -o hello.o   <span class="comment"># gcc 会自动预处理-&gt;编译-&gt;汇编</span></span><br><span class="line">g++ -c hello.cpp -o hello.o</span><br></pre></td></tr></table></figure>
+  生成的 <code>hello.o</code> 是一个二进制文件，直接用文本编辑器打开是乱码。可以使用 <code>objdump -d hello.o</code> 或 <code>nm hello.o</code> 来查看其反汇编代码或符号表</li>
+</ul>
+<p><strong>阶段 4：链接 (Linking)</strong></p>
+<ul>
+<li><strong>工具：</strong> <strong>链接器 (Linker)</strong>，如 <code>ld</code>。<code>gcc</code>&#x2F;<code>g++</code> 驱动程序会调用 <code>ld</code>，并负责传递正确的库路径和库名</li>
+<li><strong>输入：</strong> 一个或多个<strong>目标文件</strong> (<code>.o</code>) 和<strong>库文件</strong> (静态库 <code>.a</code> &#x2F; <code>.lib</code>, 动态库 <code>.so</code> &#x2F; <code>.dll</code> &#x2F; <code>.dylib</code>)</li>
+<li><strong>输出：</strong> <strong>最终的可执行文件</strong> (Linux&#x2F;Unix 无后缀或 <code>.out</code>, Windows <code>.exe</code>) 或 <strong>共享库&#x2F;动态链接库</strong> (<code>.so</code>, <code>.dll</code>, <code>.dylib</code>)</li>
+<li><strong>核心任务：</strong> 将多个独立编译的目标文件以及所需的库文件<strong>组合</strong>成一个单一的、完整的、可被操作系统加载执行的程序映像。解决<strong>符号引用</strong>问题</li>
+<li><strong>主要操作：</strong><ul>
+<li><strong>符号解析 (Symbol Resolution)：</strong><ul>
+<li>链接器扫描所有输入的目标文件和库</li>
+<li>为每个目标文件中“<strong>引用 (Reference)</strong>”的符号（如 <code>printf</code>）在输入文件中寻找其“<strong>定义 (Definition)</strong>”</li>
+<li>确保每个符号引用都能找到一个且仅一个符号定义（避免未定义引用 <code>undefined reference</code> 或多重定义 <code>multiple definition</code> 错误）</li>
+</ul>
+</li>
+<li><strong>重定位 (Relocation)：</strong><ul>
+<li>合并所有输入目标文件的同类型段（如将所有 <code>.text</code> 段合并到输出文件的 <code>.text</code> 段，所有 <code>.data</code> 段合并到 <code>.data</code> 段）</li>
+<li>计算每个定义的符号（函数、变量）在最终输出文件中的<strong>绝对内存地址</strong>（或相对于基址的相对地址）</li>
+<li>根据计算出的新地址，<strong>修改</strong>所有引用这些符号的地方（机器指令中使用的地址或数据段中的指针），填入正确的地址值。这是利用汇编阶段生成的重定位信息来完成的</li>
+</ul>
+</li>
+<li><strong>解析库依赖：</strong><ul>
+<li>链接器按顺序处理输入文件（包括命令行上指定的库）</li>
+<li>如果一个目标文件引用了库中的符号，链接器会从库中<strong>提取</strong>包含该符号定义的目标文件（模块），并将其加入链接过程。对于静态库，代码被<strong>复制</strong>到最终可执行文件中。对于动态库，只在可执行文件中<strong>记录</strong>库的名字和所需符号，运行时由操作系统加载</li>
+</ul>
+</li>
+<li><strong>生成可执行文件：</strong> 将合并、重定位后的代码和数据，以及必要的头部信息（如程序入口点 <code>_start</code>，它负责初始化环境后调用 <code>main</code>）、段表等，按照操作系统要求的格式（如 <code>ELF</code>, <code>PE</code>）打包成最终的可执行文件或共享库</li>
+</ul>
+</li>
+<li><strong>目的：</strong> 解决模块间依赖（符号引用），合并代码和数据，分配最终运行时地址，生成可直接加载运行的程序</li>
+<li><strong>执行链接：</strong>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">gcc hello.o -o hello        <span class="comment"># 链接单个目标文件 (自动链接C标准库)</span></span><br><span class="line">g++ hello.o -o hello       <span class="comment"># 链接单个目标文件 (自动链接C++和C标准库)</span></span><br><span class="line">gcc main.o utils.o -o myprog -lm <span class="comment"># 链接多个目标文件和数学库</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="3-3-动态链接与静态链接"><a href="#3-3-动态链接与静态链接" class="headerlink" title="3.3 动态链接与静态链接"></a>3.3 动态链接与静态链接</h4><p>在实际开发中，不可能将所有代码放在一个源文件中，所以会出现多个源文件，而且多个源文件之间是独立的，且会存在多种依赖关系，如一个源文件可能要调用另一个源文件中定义的函数，这是最常用的场景了；但是每个源文件是独立编译的，每个 <code>.c</code> 文件都会形成一个 <code>.o</code> 文件，为了满足前面的依赖关系，则需要将这些源文件产生的目标文件进行链接，从而形成一个可以执行的从程序。这个链接的过程就是<strong>静态链接</strong>，其缺点很明显：</p>
+<ul>
+<li><strong>浪费空间</strong>：因为每个可执行程序中对所有需要的目标文件都要有一份副本，所以如果多个程序对同一个目标文件都有依赖，如多个程序中都调用了printf()函数，则这多个程序中都含有printf.o，所以同一个目标文件都在内存存在多个副本</li>
+<li><strong>更新比较困难</strong>：因为每当库函数的代码修改了，这个时候就需要重新进行编译链接形成可执行程序。但是静态链接的优点就是，在可执行程序中已经具备了所有执行程序所需要的任何东西，在执行的时候运行速度快</li>
+</ul>
+<p>动态链接的出现解决了静态链接中给提到的问题，其思想是<strong>把程序按照模块拆分成各个相对独立的部分</strong>，在<strong>程序运行时才将它们链接到一起形成完整的可执行程序</strong>，而不是像静态链接一样把所有的程序模块都链接成一个单独的可执行文件<br>动态链接比较常用，<strong>默认情况下程序采用的都是动态链接</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ ldd hello</span><br><span class="line">   linux-vdso.so.1 (0x00007ffc9bdb2000)</span><br><span class="line">   libc.so.6 =&gt; /lib/x86_64-linux-gnu/libc.so.6 (0x000079eb86800000)</span><br><span class="line">   /lib64/ld-linux-x86-64.so.2 (0x000079eb86aa1000)</span><br><span class="line">$ </span><br><span class="line"><span class="comment"># ldd 用于打印程序或者库文件所依赖的共享库列表</span></span><br></pre></td></tr></table></figure>
+<p>在这里涉及到一个概念 <strong>库</strong> ，<br>在 <code>C</code> 程序中，并没有定义 <code>printf</code> 的函数实现，而且在预编译中包含的头文件 <code>stdio.h</code>，也只有该函数的声明，而没有定义函数的实现<br>真正的实现是在库中，<code>libc.so.6</code> 的库文件中，<strong>系统把这些函数都实现在库文件中</strong>。在没有指定路径的情况下，<code>gcc</code> 到系统默认的搜索路径下 <code>/usr/lib</code> 下进行查找，也就是链接到 <code>Libc.so.6</code> 库中，这样就能实现函数 <code>printf</code> 了，刚好这就是链接的作用</p>
+<h4 id="3-4-gcc-常用选项"><a href="#3-4-gcc-常用选项" class="headerlink" title="3.4 gcc 常用选项"></a>3.4 gcc 常用选项</h4><p> <strong>基础控制选项</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>选项</strong></th>
+<th><strong>功能</strong></th>
+<th><strong>示例</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>-E</code></td>
+<td>仅执行预处理</td>
+<td><code>gcc -E main.c -o main.i</code></td>
+</tr>
+<tr>
+<td><code>-S</code></td>
+<td>仅编译到汇编</td>
+<td><code>gcc -S main.c</code> → 生成 <code>main.s</code></td>
+</tr>
+<tr>
+<td><code>-c</code></td>
+<td>编译+汇编（不链接）</td>
+<td><code>gcc -c main.c</code> → 生成 <code>main.o</code></td>
+</tr>
+<tr>
+<td><code>-o &lt;file&gt;</code></td>
+<td>指定输出文件名</td>
+<td><code>gcc main.c -o myapp</code></td>
+</tr>
+<tr>
+<td><code>-x &lt;语言&gt;</code></td>
+<td>强制指定语言类型</td>
+<td><code>gcc -x c++ foo.txt</code></td>
+</tr>
+<tr>
+<td><code>-v</code></td>
+<td>显示详细编译过程</td>
+<td><code>gcc -v main.c</code></td>
+</tr>
+<tr>
+<td><code>-###</code></td>
+<td>显示命令但不执行</td>
+<td><code>gcc -### main.c</code></td>
+</tr>
+</tbody></table>
+<p><strong>目录与路径选项</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>选项</strong></th>
+<th><strong>功能</strong></th>
+<th><strong>示例</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>-I&lt;dir&gt;</code></td>
+<td>添加头文件搜索路径</td>
+<td><code>gcc -Iinclude/ main.c</code></td>
+</tr>
+<tr>
+<td><code>-L&lt;dir&gt;</code></td>
+<td>添加库文件搜索路径</td>
+<td><code>gcc -Llib/ main.o -lmylib</code></td>
+</tr>
+<tr>
+<td><code>-l&lt;库名&gt;</code></td>
+<td>链接指定库</td>
+<td><code>gcc main.c -lm</code>（链接数学库）</td>
+</tr>
+<tr>
+<td><code>-nostdinc</code></td>
+<td>禁止搜索标准头文件目录</td>
+<td><code>gcc -nostdinc -Icustom_include/</code></td>
+</tr>
+</tbody></table>
+<p><strong>预处理选项</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>选项</strong></th>
+<th><strong>功能</strong></th>
+<th><strong>示例</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>-D&lt;宏&gt;[=值]</code></td>
+<td>定义宏</td>
+<td><code>gcc -DDEBUG main.c</code></td>
+</tr>
+<tr>
+<td><code>-U&lt;宏&gt;</code></td>
+<td>取消宏定义</td>
+<td><code>gcc -UDEBUG main.c</code></td>
+</tr>
+<tr>
+<td><code>-include &lt;文件&gt;</code></td>
+<td>强制包含头文件</td>
+<td><code>gcc -include defs.h main.c</code></td>
+</tr>
+<tr>
+<td><code>-M</code> &#x2F; <code>-MM</code></td>
+<td>生成依赖关系（用于Makefile）</td>
+<td><code>gcc -MM main.c</code> → 输出依赖规则</td>
+</tr>
+</tbody></table>
+<p><strong>警告控制选项</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>选项</strong></th>
+<th><strong>功能</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>-Wall</code></td>
+<td>启用所有常见警告</td>
+<td>包含未使用变量、函数未声明等</td>
+</tr>
+<tr>
+<td><code>-Wextra</code></td>
+<td>启用额外警告</td>
+<td>比 <code>-Wall</code> 更严格（如空循环体）</td>
+</tr>
+<tr>
+<td><code>-Werror</code></td>
+<td>将警告视为错误</td>
+<td>编译失败</td>
+</tr>
+<tr>
+<td><code>-Wno-&lt;警告名&gt;</code></td>
+<td>禁用特定警告</td>
+<td><code>gcc -Wno-unused-variable</code></td>
+</tr>
+<tr>
+<td><code>-pedantic</code></td>
+<td>严格遵循 <code>ISO</code> 标准</td>
+<td>拒绝非标准扩展</td>
+</tr>
+</tbody></table>
+<p><strong>优化选项</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>选项</strong></th>
+<th><strong>优化级别</strong></th>
+<th><strong>特点</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>-O0</code></td>
+<td>无优化</td>
+<td>编译快，调试友好（默认）</td>
+</tr>
+<tr>
+<td><code>-O1</code></td>
+<td>基础优化</td>
+<td>平衡性能与编译速度</td>
+</tr>
+<tr>
+<td><code>-O2</code></td>
+<td>推荐优化</td>
+<td>激进优化（不增加代码大小）</td>
+</tr>
+<tr>
+<td><code>-O3</code></td>
+<td>最高优化</td>
+<td>可能增加代码大小（循环展开等）</td>
+</tr>
+<tr>
+<td><code>-Os</code></td>
+<td>优化代码大小</td>
+<td>适用于嵌入式设备</td>
+</tr>
+<tr>
+<td><code>-Ofast</code></td>
+<td>激进优化</td>
+<td>可能违反标准（如浮点精度）</td>
+</tr>
+</tbody></table>
+<p><strong>调试选项</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>选项</strong></th>
+<th><strong>功能</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>-g</code></td>
+<td>生成调试信息</td>
+<td>支持 <code>GDB</code> 调试</td>
+</tr>
+<tr>
+<td><code>-ggdb</code></td>
+<td>生成GDB专用调试信息</td>
+<td>比 <code>-g</code> 更详细</td>
+</tr>
+<tr>
+<td><code>-g3</code></td>
+<td>包含宏定义信息</td>
+<td>调试时可展开宏</td>
+</tr>
+<tr>
+<td><code>-s</code></td>
+<td>移除所有符号表</td>
+<td>减小可执行文件大小</td>
+</tr>
+<tr>
+<td><code>-p</code> &#x2F; <code>-pg</code></td>
+<td>生成性能分析数据</td>
+<td>用于 <code>gprof</code> 分析</td>
+</tr>
+</tbody></table>
+<p><strong>七、链接选项</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>选项</strong></th>
+<th><strong>功能</strong></th>
+<th><strong>示例</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>-static</code></td>
+<td>静态链接</td>
+<td><code>gcc -static main.c</code></td>
+</tr>
+<tr>
+<td><code>-shared</code></td>
+<td>生成动态库</td>
+<td><code>gcc -shared -fPIC -o libfoo.so foo.c</code></td>
+</tr>
+<tr>
+<td><code>-fPIC</code></td>
+<td>生成位置无关代码</td>
+<td>编译动态库必备</td>
+</tr>
+<tr>
+<td><code>-pthread</code></td>
+<td>支持多线程</td>
+<td>定义宏并链接线程库</td>
+</tr>
+<tr>
+<td><code>-Wl,&lt;选项&gt;</code></td>
+<td>传递选项给链接器</td>
+<td><code>gcc -Wl,-rpath=/lib main.c</code></td>
+</tr>
+</tbody></table>
+<p><strong>语言标准选项</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>选项</strong></th>
+<th><strong>标准</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>-std=c89</code> &#x2F; <code>-ansi</code></td>
+<td><code>C89</code> 标准</td>
+<td>传统 <code>C</code> 语言</td>
+</tr>
+<tr>
+<td><code>-std=c99</code></td>
+<td><code>C99</code> 标准</td>
+<td>支持 <code>//</code> 注释、<code>long long</code></td>
+</tr>
+<tr>
+<td><code>-std=c11</code></td>
+<td><code>C11</code> 标准</td>
+<td>现代 <code>C</code> 语言（推荐）</td>
+</tr>
+<tr>
+<td><code>-std=c++11</code></td>
+<td><code>C++11</code> 标准</td>
+<td>智能指针、<code>Lambda</code></td>
+</tr>
+<tr>
+<td><code>-std=c++17</code></td>
+<td><code>C++17</code> 标准</td>
+<td>结构化绑定、<code>std::optional</code></td>
+</tr>
+</tbody></table>
+<h3 id="4-Makefile"><a href="#4-Makefile" class="headerlink" title="4. Makefile"></a>4. Makefile</h3><p><strong>Makefile</strong> 是一个用于自动化软件构建过程的脚本文件，由 <code>make</code> 工具解析执行。它定义了项目中的依赖关系、构建规则和操作指令，主要用于编译源代码、链接目标文件和管理项目构建流程</p>
+<ul>
+<li>一个工程中的源文件不计其数，其类型、功能、模块分别放在若干个目录中，<code>makefile</code> 定义了一系列的规则来指定哪些文件需要先编译，哪些文件需要后编译，甚至是更复杂的操作</li>
+<li><code>makefile</code> 带来的好处就是—自动化编译，一旦写好，只需要一个 <code>make</code> 命令，整个工程就能按照定义的规则自动编译，极大地提高了软件开发的效率</li>
+<li><code>make</code> 是一个工具，具体来说是解释 <code>makefile</code> 中指令的命令工具。一般，大部分的 <code>IDE</code> 都有这个命令，如 <code>Delphi</code> 的 <code>make</code>，<code>Visual C++</code> 中的 <code>namke</code>，<code>Linux</code>下的 <code>GNU</code> 的 <code>make</code></li>
+<li><code>make</code> 是一条命令，<code>makefile</code> 是一个文件，两个搭配使用，完成项目的自动化构建</li>
+</ul>
+<p><strong>核心概念</strong></p>
+<ol>
+<li><strong>目标（Target）</strong><br>需要生成的文件（如可执行文件、目标文件）或伪目标（如 <code>clean</code>）</li>
+<li><strong>依赖（Prerequisites）</strong><br>目标所依赖的文件或其他目标</li>
+<li><strong>命令（Recipe）</strong><br>构建目标时执行的 <code>Shell</code> 命令（<strong>必须用 Tab 缩进</strong>）</li>
+</ol>
+<h4 id="4-1-基本使用"><a href="#4-1-基本使用" class="headerlink" title="4.1 基本使用"></a>4.1 基本使用</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Hello makefile!\n&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>以单个简单的源文件作为示例</p>
+<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">Hello:Hello.c</span></span><br><span class="line">    gcc -o Hello Hello.c</span><br><span class="line"><span class="meta"><span class="keyword">.PHONY</span>: clean</span></span><br><span class="line"><span class="section">clean:</span></span><br><span class="line">    rm -f Hello</span><br></pre></td></tr></table></figure>
+<p>上面的 <code>makefile</code> 中，大部分其实都是用我们正常使用 <code>gcc/g++</code> 时的语法，只是放在 <code>makefile</code> 中了而已，执行的时候只需输入 <code>make</code> 即可自动完成 <code>makefile</code> 中的命令<br><strong>依赖关系</strong><br>上面的文件 <code>Hello.c</code>，生成可执行程序<code>Hello</code>(<code>Hello</code> 依赖于 <code>Hello.c</code>)<br><strong>依赖方法</strong><br><code>gcc -o Hello Hello.c</code>，就是上面的依赖关系<br><strong>项目清理</strong></p>
+<ul>
+<li>工程是需要清理的</li>
+<li><code>clean</code>，没有被第一个目标文件直接或间接关联，那么它后面所定义的命令将不会被自动执行，不过，可以通过显示 <code>make</code> 执行，也就是 <code>make clean</code>，以此来清除所有的目标文件，以重新编译</li>
+<li>一般将 <code>clean</code> 这种目标文件，设置为伪目标(不生成实际文件的目标)，用 <code>.PHONY</code> 修饰，伪目标的特性是：<strong>总是被执行</strong></li>
+</ul>
+<p><strong>总是被执行：</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">stat</span> ***</span><br><span class="line">  File: ***</span><br><span class="line">  Size: **              Blocks: *          IO Block: *   regular file</span><br><span class="line">Device: 253,1   Inode: 810719      Links: 1</span><br><span class="line">Access: (0664/-rw-rw-r--)  Uid: ( 1000/     wyf)   Gid: ( 1000/     wyf)</span><br><span class="line">Access: 2024-06-05 15:33:54.461535234 +0800</span><br><span class="line">Modify: 2024-06-05 15:33:42.343412262 +0800</span><br><span class="line">Change: 2024-06-05 15:33:42.343412262 +0800</span><br><span class="line"> Birth: 2024-06-05 15:33:42.342412252 +0800 </span><br></pre></td></tr></table></figure>
+<ul>
+<li>文件 &#x3D; 内容 + 属性</li>
+<li><code>Modify</code>: 内容变更，时间更新</li>
+<li><code>Change</code>：属性变更，时间更新</li>
+<li><code>Access</code>：常指的是文件最近一次被访问的时间。在 <code>Linux</code> 的早期版本中，每当文件被访问时，其 <code>atime</code> 都会更新。但这种机制会导致大量的 <code>IO</code> 操作。具体更新原则，此处不做深究</li>
+</ul>
+<!-- ![1749109535572](image/基础开发工具/1749109535572.png) -->
+
+<p><code>.PHONY</code> :让 <code>make</code> 忽略源文件和可执行目标文件的 <code>M</code> 时间对比</p>
+<h4 id="4-2-推导过程"><a href="#4-2-推导过程" class="headerlink" title="4.2 推导过程"></a>4.2 推导过程</h4><figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">Hello:Hello.o</span></span><br><span class="line">    gcc Hello.o -o Hello</span><br><span class="line"><span class="section">Hello.o:Hello.s</span></span><br><span class="line">    gcc -c Hello.s -o Hello.o</span><br><span class="line"><span class="section">Hello.s:Hello.i</span></span><br><span class="line">    gcc -S Hello.i -o Hello.s</span><br><span class="line"><span class="section">Hello.i:Hello.c</span></span><br><span class="line">    gcc -E Hello.c -o Hello.i</span><br><span class="line"><span class="meta"><span class="keyword">.PHONY</span>:clean</span></span><br><span class="line"><span class="section">clean:</span></span><br><span class="line">    rm -f *.i *.s *.o Hello</span><br></pre></td></tr></table></figure>
+<p>编译</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ make</span><br><span class="line">gcc -E Hello.c -o Hello.i</span><br><span class="line">gcc -S Hello.i -o Hello.s</span><br><span class="line">gcc -c Hello.s -o Hello.o</span><br><span class="line">gcc Hello.o -o Hello</span><br><span class="line">$ ./Hello </span><br><span class="line">Hello makefile!</span><br><span class="line">$ make clean</span><br><span class="line"><span class="built_in">rm</span> -f *.i *.s *.o Hello</span><br></pre></td></tr></table></figure>
+<p><code>make</code> 的核心机制是 <strong>基于文件依赖关系和时间戳</strong> 来决定是否需要重建目标。如果依赖文件不存在，且没有规则能创建它，<code>make</code> 会拒绝工作</p>
+<p><code>make</code> 是如何工作的?在只输入 <code>make</code> 命令时：</p>
+<ol>
+<li><code>make</code> 会在当前目录下找名字叫 <code>makefile</code> 或 <code>makefile</code> 的文件</li>
+<li>如果找到，它会找文件中的第一个目标文件(<code>target</code>)，在上面的示例中，会找到 <code>Hello</code>，并将其作为最终的目标文件</li>
+<li>如果 <code>Hello</code> 文件不存在。或是 <code>Hello</code> 所依赖的后面的 <code>Hello.o </code> 文件的修改时间要比 <code>Hello</code> 这个文件新(可以用 <code>touch</code> 测试)，那么，它就会执行后面所定义的命令来生成这个文件</li>
+<li>如果 <code>Hello</code> 所依赖的 <code>Hello.o</code> 文件不存在，那么 <code>make</code> 会在当前文件中找目标为 <code>Hello.o</code> 文件的依赖性，如果找到则再根据对应的规则生成 <code>Hello.o</code> 文件(类似于堆栈的过程)</li>
+</ol>
+<!-- ![1749110542082](image/基础开发工具/1749110542082.png) -->
+
+<ol start="5">
+<li><code>C</code> 文件和 <code>H</code> 文件是存在的，于是 <code>make</code> 就会生成 <code>Hello.o</code> 文件，然后再调用 <code>Hello.o</code> 文件声明的终极任务，也就是生成执行文件 <code>Hello</code></li>
+<li>这就是 <code>make</code> 的依赖性，<code>make</code> 会一层一层的找文件的依赖关系，直到最终编译出目标文件</li>
+<li>在寻找的过程中，如果出现错误，比如依赖的文件找不到，那么 <code>make</code> 就会直接退出，并报错，而对于所定义命令的错误，或是编译不成功，<code>make</code> 不会处理(自己定义的规则出了问题由你承担)</li>
+<li><code>make</code> 只负责文件的依赖性，也就是说：如果找到了依赖关系后，冒号后的文件还是不存在，那么 <code>make</code> 不会工作</li>
+</ol>
+<h4 id="4-3-补充语法"><a href="#4-3-补充语法" class="headerlink" title="4.3 补充语法"></a>4.3 补充语法</h4><ol>
+<li><p><strong>变量定义</strong></p>
+<ul>
+<li><code>BIN = main</code> 最终生成的可执行文件名</li>
+<li><code>SRC = $(wildcard *.c)</code> 获取所有源文件（推荐使用  <code>wildcard</code>）</li>
+<li><code>OBJ = $(SRC:.c=.o)</code> 将 <code>.c</code> 文件列表转为 <code>.o</code> 文件列表</li>
+<li><code>CC = gcc</code> <code>C</code> 编译器（<code>C++</code> 使用 <code>g++</code>）</li>
+</ul>
+</li>
+<li><p><strong>特殊函数</strong></p>
+<ul>
+<li><code>SRC=$(shell ls *.c</code> 采用 <code>shell</code> 命令的方式获取当前所有的 <code>.c</code> 文件</li>
+<li><code>SRC=$(wildcard *.c)</code> 采用 <code>wildcard</code> 函数，获取当前所有 <code>.c</code> 文件</li>
+</ul>
+</li>
+<li><p><strong>编译选项</strong></p>
+<ul>
+<li><code>LDFLAGS=-o </code> 链接选项</li>
+<li><code>CLAGS=-c</code> 编译选项</li>
+<li><code>RM=rm -rf</code> 引入删除命令</li>
+</ul>
+</li>
+<li><p><strong>自动变量</strong></p>
+<ul>
+<li><code>$@</code> 代表目标文件名</li>
+<li><code>$^</code> 代表依赖文件列表</li>
+<li><code>$&lt;</code> 对展开的依赖 <code>.c</code> 文件，一个一个的交给指定的编译工具</li>
+</ul>
+</li>
+<li><p><strong>模式规则</strong> </p>
+<ul>
+<li><code>%.o:%.c</code> 为每个 <code>.c</code> 文件生成对应的 <code>.o</code> 文件</li>
+</ul>
+</li>
+<li><p><strong>特殊符号</strong> </p>
+<ul>
+<li><code>$@</code> 不回显命令</li>
+</ul>
+</li>
+</ol>
+<p>完整 <code>makefile</code></p>
+<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">BIN = Hello</span><br><span class="line">SRC = <span class="variable">$(<span class="built_in">wildcard</span> *.c)</span></span><br><span class="line">OBJ = $(SRC:.c=.o)</span><br><span class="line">CC = gcc</span><br><span class="line">CFLAGS = -c </span><br><span class="line">LDFLAGES = -o </span><br><span class="line">RM = rm -f</span><br><span class="line"></span><br><span class="line"><span class="variable">$(BIN)</span>:<span class="variable">$(OBJ)</span></span><br><span class="line">    @<span class="variable">$(CC)</span> <span class="variable">$(LDFLAGES)</span> <span class="variable">$@</span> <span class="variable">$^</span></span><br><span class="line">    @echo <span class="string">&quot;Linking……<span class="variable">$^</span> to <span class="variable">$@</span>&quot;</span></span><br><span class="line">%.o : %.c </span><br><span class="line">    @<span class="variable">$(CC)</span> <span class="variable">$(CFLAGS)</span> <span class="variable">$&lt;</span></span><br><span class="line">    @echo <span class="string">&quot;Comling……<span class="variable">$&lt;</span> to <span class="variable">$@</span>&quot;</span></span><br><span class="line"><span class="meta"><span class="keyword">.PHONY</span>:clean</span></span><br><span class="line"><span class="section">clean:</span></span><br><span class="line">    <span class="variable">$(RM)</span> <span class="variable">$(OBJ)</span> <span class="variable">$(BIN)</span></span><br><span class="line"><span class="meta"><span class="keyword">.PHONY</span>:run</span></span><br><span class="line"><span class="section">run:</span></span><br><span class="line">    @./<span class="variable">$(BIN)</span></span><br></pre></td></tr></table></figure>
+<p>使用👇</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ make</span><br><span class="line">Comling……Hello.c to Hello.o</span><br><span class="line">Linking……Hello.o to Hello</span><br><span class="line">$ make run</span><br><span class="line">Hello makefile!</span><br><span class="line">$ make clean</span><br><span class="line"><span class="built_in">rm</span> -f Hello.o Hello</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-Linux第一个程序—进度条"><a href="#5-Linux第一个程序—进度条" class="headerlink" title="5. Linux第一个程序—进度条"></a>5. Linux第一个程序—进度条</h3><h4 id="5-1-换行与回车"><a href="#5-1-换行与回车" class="headerlink" title="5.1 换行与回车"></a>5.1 换行与回车</h4><p>换行（<code>Line Feed</code>，<code>LF</code>，<code>\n</code>）和回车（<code>Carriage Return</code>，<code>CR</code>，<code>\r</code>）的区别源于计算机历史，在系统中的表现主要取决于操作系统<br><strong>核心区别</strong></p>
+<ol>
+<li><p><strong>回车 (CR, <code>\r</code>)</strong>  </p>
+<ul>
+<li><strong>起源</strong>：机械打字机时代，表示将打印头移回行首（<code>Carriage Return</code>）</li>
+<li><strong>作用</strong>：光标回到当前行的开头，不换行 </li>
+<li><strong>ASCII 码</strong>：<code>0x0D</code>（十进制 <code>13</code>）</li>
+</ul>
+</li>
+<li><p><strong>换行 (LF, <code>\n</code>)</strong>  </p>
+<ul>
+<li><strong>起源</strong>：机械打字机中，表示滚筒下移一行（<code>Line Feed</code>）</li>
+<li><strong>作用</strong>：光标垂直移动到下一行，但水平位置不变 </li>
+<li><strong>ASCII 码</strong>：<code>0x0A</code>（十进制 <code>10</code>）</li>
+</ul>
+</li>
+</ol>
+<p><strong>操作系统中的实现差异</strong></p>
+<table>
+<thead>
+<tr>
+<th>系统</th>
+<th>换行符表示</th>
+<th>行为说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Linux&#x2F;Unix&#x2F;macOS（现代）</strong></td>
+<td><code>\n</code> (<code>LF</code>)</td>
+<td>仅需一个字符表示换行：<br> 1. 移动到下一行<br> 2. 回到行首（隐含回车动作）</td>
+</tr>
+<tr>
+<td><strong>Windows</strong></td>
+<td><code>\r\n</code> (<code>CR+LF</code>)</td>
+<td>需两个字符：<br> 1. <code>\r</code> 回到行首<br> 2. <code>\n</code> 移动到下一行</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>📌 <strong>关键点</strong>：Linux 的 <code>\n</code> <strong>等价于</strong> Windows 的 <code>\r\n</code>，它同时完成了“回车+换行”两个动作</p>
+</blockquote>
+<p><strong>为什么在 Linux 中单独拎出来说</strong></p>
+<ol>
+<li><p><strong>文件格式问题</strong>  </p>
+<ul>
+<li>若 <code>Windows</code> 文件（含 <code>\r\n</code>）在 <code>Linux</code> 中打开，多余的 <code>\r</code> 会显示为 <code>^M</code>（如 <code>cat -A file</code> 可见），可能导致脚本错误</li>
+<li><strong>示例</strong><code>：Shell</code> 脚本包含 <code>\r</code> 时，会报错 <code>bash: $&#39;\r&#39;: command not found</code></li>
+</ul>
+</li>
+<li><p><strong>工具兼容性</strong>  </p>
+<ul>
+<li><code>Linux</code> 工具（如 <code>grep</code>, <code>sed</code>）默认按 <code>\n</code> 识别行尾。若文件含 <code>\r\n</code>，可能影响文本处理</li>
+</ul>
+</li>
+<li><p><strong>跨平台协作</strong>  </p>
+<ul>
+<li><code>Git</code> 等工具在 <code>Windows</code>&#x2F;<code>Linux</code> 间同步代码时，可能自动转换换行符（通过 <code>core.autocrlf</code> 配置）</li>
+</ul>
+</li>
+</ol>
+<h4 id="5-2-行缓冲区"><a href="#5-2-行缓冲区" class="headerlink" title="5.2 行缓冲区"></a>5.2 行缓冲区</h4><p>在 <code>C</code> 语言中，标准输出流（<code>stdout</code>）默认使用<strong>行缓冲模式</strong>。也就是说输出内容会先存储在内存缓冲区中，直到满足特定条件才实际写入终端，下面具体分析：</p>
+<p><strong>换行符触发刷新（<code>\n</code>）</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Hello world!\n&quot;</span>);  <span class="comment">// 包含换行符</span></span><br><span class="line">    sleep(<span class="number">3</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>结果</strong>：立即输出 “Hello world!”，然后等待 <code>3</code> 秒</li>
+<li><strong>原理</strong>：<code>\n</code>符合行缓冲的刷新条件，触发缓冲区立即刷新</li>
+</ul>
+<p><strong>无刷新导致延迟输出</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Hello world!&quot;</span>);  <span class="comment">// 无换行符</span></span><br><span class="line">    sleep(<span class="number">3</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>结果</strong>：先等待 <code>3</code> 秒，程序结束时才输出 “Hello world!”</li>
+<li><strong>原理</strong>：</li>
+<li>输出内容暂存缓冲区（未达到刷新条件）</li>
+<li><code>sleep(3)</code>期间缓冲区保持未刷新状态</li>
+<li>程序结束时自动刷新所有缓冲区</li>
+</ul>
+<p><strong>手动强制刷新缓冲区（<code>fflush</code>）</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Hello world!&quot;</span>);</span><br><span class="line">    fflush(<span class="built_in">stdout</span>);  <span class="comment">// 强制刷新</span></span><br><span class="line">    sleep(<span class="number">3</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>结果</strong>：立即输出 “Hello world!”，然后等待 <code>3</code> 秒</li>
+<li><strong>原理</strong>：<code>fflush(stdout)</code>强制清空缓冲区</li>
+</ul>
+<p>缓冲区核心作用</p>
+<ol>
+<li><p><strong>减少系统调用</strong><br>每次实际输出（如终端显示）需切换到内核态，频繁操作效率低下。缓冲区积累数据后批量写入，显著提升性能</p>
+</li>
+<li><p><strong>优化I&#x2F;O效率</strong><br>示例中若每秒输出 <code>1</code> 字符：</p>
+<ul>
+<li>无缓冲：触发 <code>100</code> 次系统调用（效率极低）</li>
+<li>有缓冲：单次系统调用写入全部内容</li>
+</ul>
+</li>
+<li><p><strong>刷新触发条件</strong>  </p>
+<table>
+<thead>
+<tr>
+<th>条件</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>遇到换行符 <code>\n</code></td>
+<td><code>printf(&quot;text\n&quot;)</code></td>
+</tr>
+<tr>
+<td>缓冲区满</td>
+<td>默认大小约4KB</td>
+</tr>
+<tr>
+<td>手动刷新</td>
+<td><code>fflush(stdout)</code></td>
+</tr>
+<tr>
+<td>程序正常终止</td>
+<td><code>return 0</code>&#x2F;<code>exit()</code></td>
+</tr>
+</tbody></table>
+</li>
+</ol>
+<p>缓冲区工作流程</p>
+<!-- ![1752669629256](image/基础开发工具/1752669629256.png) -->
+
+
+<h4 id="5-3-倒计时程序"><a href="#5-3-倒计时程序" class="headerlink" title="5.3 倒计时程序"></a>5.3 倒计时程序</h4><p>下面基于上面所介绍的内容，实现一个简易的倒计时程序</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// countdown.c</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;unistd.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> count = <span class="number">10</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;倒计时开始\n&quot;</span>);</span><br><span class="line">    <span class="keyword">while</span>(count)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;\r[ %2d ]&quot;</span>, count);</span><br><span class="line">        fflush(<span class="built_in">stdout</span>);</span><br><span class="line">        sleep(<span class="number">1</span>);</span><br><span class="line">        count--;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n倒计时结束!\n&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>结果</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ ./countdown </span><br><span class="line">倒计时开始</span><br><span class="line">[  1 ]</span><br><span class="line">倒计时结束!</span><br><span class="line">$ </span><br></pre></td></tr></table></figure>
+
+<h4 id="5-4-进度条代码"><a href="#5-4-进度条代码" class="headerlink" title="5.4 进度条代码"></a>5.4 进度条代码</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// progress_bar.h</span></span><br><span class="line"><span class="meta">#<span class="keyword">pragma</span> once</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;time.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">progress_bar</span><span class="params">()</span>;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// progress_bar.c</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;progress_bar.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> SIZE 100</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TYPE <span class="string">&quot;=&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">progress_bar</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">static</span> <span class="type">const</span> <span class="type">char</span> labble[<span class="number">4</span>] = &#123;<span class="string">&#x27;|&#x27;</span>, <span class="string">&#x27;/&#x27;</span>, <span class="string">&#x27;-&#x27;</span>, <span class="string">&#x27;\\&#x27;</span>&#125;;</span><br><span class="line">    <span class="type">char</span> buffer[SIZE + <span class="number">1</span>];</span><br><span class="line">    <span class="built_in">memset</span>(buffer, <span class="number">0</span>, <span class="keyword">sizeof</span>(buffer));</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> percent = <span class="number">0</span>; percent &lt;= SIZE; percent++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (percent &lt; SIZE)</span><br><span class="line">            buffer[percent] = TYPE[<span class="number">0</span>];</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;[%-*s][%3d%%][%c]\r&quot;</span>, SIZE, buffer, percent, labble[percent % <span class="number">4</span>]);</span><br><span class="line">        fflush(<span class="built_in">stdout</span>);</span><br><span class="line">        usleep(<span class="number">30000</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// main.c</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&quot;progress_bar.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    progress_bar();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>效果</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ ./progress_bar </span><br><span class="line">[====================================================================================================][100%][|]</span><br><span class="line">$ </span><br></pre></td></tr></table></figure>
+
+<p><strong>扩展功能</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;progress_bar.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="title function_">void</span><span class="params">(Cal)</span><span class="params">(<span class="type">double</span> total, <span class="type">double</span> current, <span class="type">char</span> *name)</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">double</span> speed[] = &#123;<span class="number">1.23</span>, <span class="number">0.28</span>, <span class="number">1.5</span>, <span class="number">1.1</span>, <span class="number">0.1</span>, <span class="number">2.5</span>&#125;;</span><br><span class="line"><span class="comment">// 模拟因各种原因导致不同的下载速度</span></span><br><span class="line"><span class="type">int</span> len_speed = <span class="keyword">sizeof</span>(speed) / <span class="keyword">sizeof</span>(speed[<span class="number">0</span>]);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 模拟任务</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">upload</span><span class="params">(<span class="type">double</span> total, Cal cal)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">double</span> current = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (current &lt; total)</span><br><span class="line">    &#123;</span><br><span class="line">        usleep(<span class="number">20000</span>);</span><br><span class="line">        current += speed[rand() % len_speed];</span><br><span class="line">        <span class="keyword">if</span> (current &gt; total)</span><br><span class="line">        &#123;</span><br><span class="line">            current = total;</span><br><span class="line">        &#125;</span><br><span class="line">        cal(total, current, <span class="string">&quot;uploading&quot;</span>);</span><br><span class="line">        <span class="keyword">if</span> (current &gt;= total)</span><br><span class="line">        &#123;</span><br><span class="line">            current = total;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">download</span><span class="params">(<span class="type">double</span> total, Cal cal)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">double</span> current = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (current &lt; total)</span><br><span class="line">    &#123;</span><br><span class="line">        usleep(<span class="number">10000</span>);</span><br><span class="line">        current += speed[rand() % len_speed];</span><br><span class="line">        <span class="keyword">if</span> (current &gt; total)</span><br><span class="line">        &#123;</span><br><span class="line">            current = total;</span><br><span class="line">        &#125;</span><br><span class="line">        cal(total, current, <span class="string">&quot;downloading&quot;</span>);</span><br><span class="line">        <span class="keyword">if</span> (current &gt;= total)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    srand(time(<span class="literal">NULL</span>));</span><br><span class="line">    upload(<span class="number">1024</span>, progress_bar_extend);</span><br><span class="line">    download(<span class="number">4545</span>,progress_bar_extend);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//progress_bar.c</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;progress_bar.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> SIZE 100</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> TYPE <span class="string">&quot;=&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">progress_bar_extend</span><span class="params">(<span class="type">double</span> total, <span class="type">double</span> current, <span class="type">char</span> *name)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">static</span> <span class="type">const</span> <span class="type">char</span> label[<span class="number">4</span>] = &#123;<span class="string">&#x27;|&#x27;</span>, <span class="string">&#x27;/&#x27;</span>, <span class="string">&#x27;-&#x27;</span>, <span class="string">&#x27;\\&#x27;</span>&#125;;</span><br><span class="line">    <span class="type">static</span> <span class="type">int</span> len_label = <span class="keyword">sizeof</span>(label) / <span class="keyword">sizeof</span>(label[<span class="number">0</span>]);</span><br><span class="line">    <span class="type">static</span> <span class="type">int</span> index_label = <span class="number">0</span>;</span><br><span class="line">    <span class="type">char</span> buffer[SIZE + <span class="number">1</span>];</span><br><span class="line">    <span class="built_in">memset</span>(buffer, <span class="number">0</span>, <span class="keyword">sizeof</span>(buffer));</span><br><span class="line">    <span class="type">double</span> percent = (current / total) * <span class="number">100</span>;</span><br><span class="line">    percent = percent &lt; <span class="number">0</span> ? <span class="number">0</span> : (percent &gt; <span class="number">100</span> ? <span class="number">100</span> : percent);</span><br><span class="line">    <span class="type">int</span> pos = (<span class="type">int</span>)(percent);</span><br><span class="line">    <span class="keyword">if</span> (pos &gt; <span class="number">0</span>)</span><br><span class="line">        <span class="built_in">memset</span>(buffer, TYPE[<span class="number">0</span>], pos);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;[%-*s][%3.1f%%][%c][%s...]\r&quot;</span>, SIZE, buffer, percent, label[index_label % len_label], name);</span><br><span class="line">    index_label++;</span><br><span class="line">    fflush(<span class="built_in">stdout</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//progress_bar.h</span></span><br><span class="line"><span class="meta">#<span class="keyword">pragma</span> once</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;time.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">progress_bar_extend</span><span class="params">(<span class="type">double</span> total, <span class="type">double</span> current, <span class="type">char</span> *name)</span>;</span><br></pre></td></tr></table></figure>
+<p><strong>效果演示</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ ./progress_bar </span><br><span class="line">[====================================================================================================][100.0%][|][uploading...]</span><br><span class="line">[====================================================================================================][100.0%][-][downloading...]</span><br><span class="line">$ </span><br></pre></td></tr></table></figure>
+
+<h3 id="6-版本控制器Git"><a href="#6-版本控制器Git" class="headerlink" title="6. 版本控制器Git"></a>6. 版本控制器Git</h3><h4 id="6-1-问题引入"><a href="#6-1-问题引入" class="headerlink" title="6.1 问题引入"></a>6.1 问题引入</h4><p>想象一下你和同事 <strong>小王</strong> 正在合作撰写一份重要的项目报告（<code>report.docx</code>）。你们需要反复修改和完善这份文档</p>
+<ol>
+<li><strong>第一天：</strong> 你完成了初稿，保存为 <code>report_v1.docx</code>，然后通过邮件发给小王</li>
+<li><strong>第二天：</strong> 小王修改了你的版本，添加了新内容，保存为 <code>report_v2_wang.docx</code>，并邮件发回给你</li>
+<li><strong>第三天：</strong> 你收到小王的版本，发现他修改了某个你很重要的部分，同时你也有新的想法要加入。于是你：<ul>
+<li>基于 <code>report_v1.docx</code> 修改了你认为重要的部分，保存为 <code>report_v1_final_me.docx</code>。</li>
+<li>又基于 <code>report_v2_wang.docx</code> 添加了你的新想法，保存为 <code>report_v2_me_added.docx</code>。</li>
+</ul>
+</li>
+<li><strong>第四天：</strong> 小王又发来一个文件 <code>report_v3_wang_fixed.docx</code>，说在 <code>v2</code> 的基础上修正了一些错误…</li>
+<li><strong>问题爆发：</strong><ul>
+<li>文件夹里堆满了 <code>report_v1.docx</code>, <code>report_v1_final_me.docx</code>, <code>report_v2_wang.docx</code>, <code>report_v2_me_added.docx</code>, <code>report_v3_wang_fixed.docx</code>… 哪个是最新的？哪个包含了你俩都认可的所有修改？哪次修改引入了那个关键错误？</li>
+<li>不小心覆盖了文件怎么办？误删了某个“版本”怎么办？</li>
+<li>如何把你基于 <code>v1</code> 的修改和小王在 <code>v2</code> 上的修改<strong>合并</strong>成一个包含所有内容的新版本？手动复制粘贴？</li>
+<li>某段文字被删了，是谁删的？什么时候删的？为什么删？</li>
+</ul>
+</li>
+</ol>
+<p><strong>这就是“版本控制”要解决的核心问题！</strong></p>
+<p>在没有版本控制系统（如 <code>Git</code>）的情况下，协作修改文件（尤其是代码、配置、设计稿等文本类文件）会变得极其混乱、低效且充满风险</p>
+<h4 id="6-2-Git-登场：优雅的版本控制"><a href="#6-2-Git-登场：优雅的版本控制" class="headerlink" title="6.2 Git 登场：优雅的版本控制"></a>6.2 Git 登场：优雅的版本控制</h4><p>为了方便我们管理不同的文件，便有了<strong>版本控制器</strong>，其能让你了解到一个文件的历史，以及它的发展此过程的系统。通俗的讲就是一个可以记录工程的每一次改动和版本迭代的一个管理系统，同时也方便多人协同作业</p>
+<p><strong>Git 几乎能管理任何文件格式：</strong> <strong>但是，“可以管理”不等于“适合管理”或“管理得好”。</strong> 文件格式对 <code>Git</code> 的效率和实用性有着<strong>巨大影响</strong></p>
+<ol>
+<li><p><strong>文本文件 (Text Files)：Git 的“主战场”</strong></p>
+<ul>
+<li><strong>优势：</strong><ul>
+<li><strong>差异比较 (Diff)：</strong> <code>Git</code> 的核心功能之一是展示文件内容的变化（<code>git diff</code>）。对于文本文件（如 <code>.txt</code>, <code>.py</code>, <code>.java</code>, <code>.c</code>, <code>.html</code>, <code>.css</code>, <code>.js</code>, <code>.json</code>, <code>.xml</code>, <code>.md</code> 等），Git 可以清晰地逐行显示添加、删除或修改了哪些内容</li>
+<li><strong>高效存储：</strong> <code>Git</code> 使用差异算法（基于快照，但存储时复用相同内容）和压缩技术。当文本文件只有小部分修改时，<code>Git</code> 只需要存储变化的部分，非常节省空间</li>
+<li><strong>合并 (Merge)：</strong> <code>Git</code> 最强大的功能之一是自动合并不同分支上的修改。对于文本文件，只要修改发生在不同行，<code>Git</code> 通常能完美地自动合并这些更改。如果修改了同一行（冲突），<code>Git</code> 会明确标记出来让你手动解决</li>
+<li><strong>版本历史可读性：</strong> 查看文本文件的历史版本 (<code>git show</code>) 或比较不同版本 (<code>git diff commit1 commit2 -- file</code>) 非常直观和有价值</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>二进制文件 (Binary Files)：Git 的“痛点”</strong></p>
+<ul>
+<li><strong>劣势：</strong><ul>
+<li><strong>无法有效 Diff：</strong> 二进制文件（如图片 <code>.jpg</code>, <code>.png</code>, 视频 <code>.mp4</code>, 音频 <code>.mp3</code>, 压缩包 <code>.zip</code>, 可执行文件 <code>.exe</code>, <code>.dll</code>, Word 文档 <code>.docx</code>, <code>Excel</code> 表格 <code>.xlsx</code>, PDF <code>.pdf</code> 等）内部结构复杂。<code>Git</code> 无法理解其内容，只能将其视为一大块不透明的二进制数据。运行 <code>git diff</code> 时，你只会看到类似 <code>Binary files a/file.jpg and b/file.jpg differ</code> 的信息，完全不知道具体哪里变了</li>
+<li><strong>低效存储：</strong> <code>Git</code> 对二进制文件的处理非常“笨拙”。即使二进制文件只改动了一个像素或一个字节，Git 通常也会存储整个文件的<strong>新副本</strong>。这会导致仓库体积<strong>急剧膨胀</strong>，克隆、拉取、推送操作变得非常<strong>缓慢</strong></li>
+<li><strong>无法自动合并：</strong> 如果两个分支都修改了同一个二进制文件，<code>Git</code> 无法自动合并它们。它只能报告冲突，并让你选择保留其中一个版本（通常是最后修改的那个），或者手动用外部工具合并（对于图片、设计稿等，这通常很困难甚至不可能）</li>
+<li><strong>版本历史价值低：</strong> 查看历史版本的二进制文件需要完整检出该版本的文件并用专用软件打开，无法像文本文件那样快速浏览差异</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p><code>Git</code> 是一个<strong>分布式版本控制系统</strong>。它的核心思想是：<strong>记录文件的变化历史，而非保存多个完整的副本</strong></p>
+<p><strong>引入 Git 后的优势总结：</strong></p>
+<ul>
+<li><strong>完整历史记录：</strong> 每个文件如何一步步变成现在的样子，清晰可查</li>
+<li><strong>版本回溯：</strong> 轻松切换到任何一个历史版本（就像游戏读档），不怕改错代码或误删文件</li>
+<li><strong>高效协作：</strong> 多人并行工作，自动合并修改，大幅提升团队效率</li>
+<li><strong>分支管理：</strong> <code>Git</code> 允许创建独立的分支，用于开发新功能、修复 <code>Bug</code> 或做实验，而不会影响主线（<code>main</code>&#x2F;<code>master</code> 分支）。功能完成后可以合并回主线。这解决了“基于 <code>v1</code> 改还是基于 <code>v2</code> 改”的困境</li>
+<li><strong>责任追溯：</strong> 明确知道每行代码是谁、在什么时候、为什么修改</li>
+<li><strong>代码备份：</strong> 本地仓库和远程仓库（如 <code>GitHub</code>）共同构成了天然的备份机制</li>
+</ul>
+<h4 id="6-3-Git发展"><a href="#6-3-Git发展" class="headerlink" title="6.3 Git发展"></a>6.3 Git发展</h4><p><code>Git</code> 的发展史充满了传奇色彩，与 <code>Linux</code> 内核的开发密不可分</p>
+<ol>
+<li><p><strong>背景：Linux 内核的困境 (2005年之前)</strong></p>
+<ul>
+<li><code>Linux</code> 内核是一个庞大且由全球开发者协作的开源项目。</li>
+<li>在 <code>2002</code> 年到 <code>2005</code> 年期间，<code>Linux</code> 开发团队使用一个名为 <strong>BitKeeper</strong> <code>的专有分布式版本控制系统。BitKeeper</code> 的创始人 <code>Larry McVoy</code> 免费授权 <code>Linux</code> 团队使用，条件是不能开发竞争工具</li>
+<li><code>BitKeeper</code> 满足了 <code>Linux</code> 大规模分布式协作的需求，效果不错</li>
+</ul>
+</li>
+<li><p><strong>导火索：BitKeeper 的终结 (2005年4月)</strong></p>
+<ul>
+<li><code>2005</code> 年，<code>Linux</code> 内核社区和 <code>BitKeeper</code> 公司之间的关系破裂。具体原因涉及对 <code>BitKeeper</code> 使用协议条款的争议以及社区中有人尝试对 <code>BitKeeper</code> 协议进行逆向工程</li>
+<li><code>Larry McVoy</code> 收回了 <code>Linux</code> 团队的免费使用授权</li>
+<li><strong>后果：</strong> <code>Linux</code> 开发团队瞬间失去了他们赖以协作的核心工具，面临巨大危机。当时的其他主流版本控制系统（如 <code>CVS</code>, <code>SVN</code>）都是集中式的，无法满足 <code>Linux</code> 分布式、高性能、大规模协作的需求</li>
+</ul>
+</li>
+<li><p><strong>林纳斯的“十日奇迹” (2005年4月)</strong></p>
+<ul>
+<li><code>Linux</code> 的创造者 <code>Linus Torvalds</code> 对当时的替代方案（如 <code>Monotone</code>）都不满意，认为它们太慢、太复杂</li>
+<li><strong>2005年4月3日：</strong> <code>Linus Torvalds</code> 决定自己动手开发一个新的版本控制系统</li>
+<li><strong>核心目标：</strong><ul>
+<li><strong>速度：</strong> 极快的操作（提交、分支切换、合并）</li>
+<li><strong>简单设计：</strong> 核心概念清晰、直接</li>
+<li><strong>强大的非线性分支支持：</strong> 鼓励频繁分支与合并（对内核开发至关重要）</li>
+<li><strong>完全分布式：</strong> 每个开发者都有完整的仓库历史，不依赖中央服务器</li>
+<li><strong>高效处理大型项目：</strong> 能轻松应对 <code>Linux</code> 内核这样超大规模的项目</li>
+<li><strong>强数据完整性：</strong> 使用 <code>SHA-1</code> 哈希（后来是 SHA-256）保证内容不被篡改</li>
+</ul>
+</li>
+<li><strong>2005年4月7日：</strong> <code>Git</code> 实现了自托管（用 <code>Git</code> 来管理 <code>Git</code> 自身的开发）</li>
+<li><strong>2005年4月18日：</strong> 合并多个外部贡献者的分支到 <code>Git</code> 主线</li>
+<li><strong>2005年4月20日：</strong> <code>Linux</code> 内核 <code>2.6.12</code> 版本发布说明中提到了 <code>Git</code></li>
+<li><strong>2005年7月：</strong> <code>Git</code> 已经足够成熟，可以接管 <code>Linux</code> 内核的版本控制工作</li>
+</ul>
+</li>
+<li><p><strong>核心设计</strong></p>
+<ul>
+<li><strong>快照，而非差异：</strong> <code>Git</code> 把每次提交看作项目文件在某个时间点的完整快照（虽然内部存储会复用未修改的文件，实现高效）。这与许多以文件差异为中心的系统不同。</li>
+<li><strong>本地操作：</strong> 几乎所有操作（查看历史、提交、分支、合并）都在本地完成，速度极快</li>
+<li><strong>数据完整性：</strong> 所有数据对象（文件内容、提交、树结构）都用其内容的 <code>SHA-1</code> 哈希值命名。任何微小的改动都会改变哈希值，保证历史不可篡改</li>
+<li><strong>“通常只添加数据”：</strong> 绝大多数 <code>Git</code> 操作只是向数据库添加数据，很难真正丢失数据（直到垃圾回收运行）</li>
+</ul>
+</li>
+<li><p><strong>成长与普及 (2005年至今)</strong></p>
+<ul>
+<li><strong>2005年底：</strong> <code>Junio Hamano</code> 接手成为 <code>Git</code> 的核心维护者，并持续至今，对 <code>Git</code> 的稳定性和功能扩展贡献巨大。</li>
+<li><strong>GitHub 的诞生 (2008年)：</strong> <code>GitHub</code> 提供了一个基于 <code>Git</code> 的代码托管平台，极大地简化了协作流程（<code>Pull Request</code>, <code>Issue Tracking</code>, <code>Web UI</code>），将 <code>Git</code> 的强大功能包装成用户友好的界面，引爆了 <code>Git</code> 的普及。<code>GitHub</code> 成为了开源世界的中心</li>
+<li><strong>竞争对手的出现：</strong> <code>GitLab</code> (<code>2011</code>), <code>Bitbucket</code> (支持 <code>Git</code> 后) 等平台也提供了强大的 <code>Git</code> 托管服务</li>
+<li><strong>工具链完善：</strong> 围绕 <code>Git</code> 开发了大量图形化客户端（如 <code>GitKraken</code>, <code>Sourcetree</code>, <code>Tower</code>）、<code>IDE</code> 集成插件（<code>VS Code</code>, <code>IntelliJ</code> 等都有极佳的 <code>Git</code> 支持）和命令行辅助工具（如 <code>tig</code>），降低了学习曲线</li>
+<li><strong>超越代码：</strong> <code>Git</code> 的核心思想被应用于管理配置文件、文档、书籍、甚至法律合同、设计稿（虽然对二进制文件支持不如文本好）等领域</li>
+</ul>
+</li>
+<li><p><strong>现状</strong></p>
+<ul>
+<li><strong>事实标准：</strong> <code>Git</code> 已成为全球软件开发领域<strong>绝对主导</strong>的版本控制系统。几乎所有大型科技公司、开源项目和个人开发者都在使用 <code>Git</code></li>
+<li><strong>持续活跃：</strong> <code>Git</code> 本身仍在积极开发和维护，不断引入新功能和性能优化（如部分克隆、稀疏检出、新的哈希算法支持 <code>SHA-256</code>）</li>
+<li><strong>生态系统庞大：</strong> 围绕 <code>Git</code> 的托管服务、工具、工作流（<code>Gitflow</code>, <code>GitHub Flow</code>, <code>GitLab Flow</code>）形成了极其庞大的生态系统</li>
+</ul>
+</li>
+</ol>
+<h4 id="6-4-Git的使用"><a href="#6-4-Git的使用" class="headerlink" title="6.4 Git的使用"></a>6.4 Git的使用</h4><h5 id="6-4-1-核心概念"><a href="#6-4-1-核心概念" class="headerlink" title="6.4.1 核心概念"></a>6.4.1 核心概念</h5><ul>
+<li><strong>仓库 (Repository)：</strong> 项目的版本控制数据库，包含所有文件的历史记录和元数据。本地仓库在项目目录下的 <code>.git</code> 文件夹中；远程仓库托管在 <code>GitHub</code>、<code>GitLab</code> 等平台</li>
+<li><strong>工作区 (Working Directory)：</strong> 我们实际看到和编辑的项目文件目录</li>
+<li><strong>暂存区 (Staging Area &#x2F; Index)：</strong> 一个中间区域，用于准备下一次提交的内容。用 <code>git add</code> 将工作区的修改放入这里</li>
+<li><strong>提交 (Commit)：</strong> 一个永久的、带描述的项目状态快照，保存在仓库历史中。由 <code>git commit</code> 创建</li>
+<li><strong>分支 (Branch)：</strong> 指向某个提交的可移动指针。默认分支通常是 <code>main</code> 或 <code>master</code>。允许我们在独立于主线的情况下开发新功能或修复 Bug</li>
+<li><strong>远程 (Remote)：</strong> 指向托管在网络上（如 <code>GitHub</code>）的仓库副本的引用（通常命名为 <code>origin</code>）。用于与他人协作和备份</li>
+</ul>
+<h5 id="6-4-2-创建仓库"><a href="#6-4-2-创建仓库" class="headerlink" title="6.4.2 创建仓库"></a>6.4.2 创建仓库</h5><p>创建一个自己的仓库很简单，步骤如下：</p>
+<ol>
+<li><strong>登录 GitHub</strong>：打开 <a target="_blank" rel="noopener" href="https://github.com/">github.com</a> 并登录你的账户</li>
+<li><strong>找到“新建仓库”按钮</strong>：<ul>
+<li>在页面右上角，点击 <strong><code>+</code></strong> 下拉菜单</li>
+<li>选择 <strong><code>New repository</code></strong></li>
+</ul>
+</li>
+<li><strong>填写仓库信息</strong>：<ul>
+<li><strong>Repository name</strong>：输入你的仓库名称（必填）</li>
+<li><strong>Description</strong>：添加一个简短的描述（可选，但推荐）</li>
+<li><strong>Public&#x2F;Private</strong>：选择仓库是公开（所有人可见）还是私有（仅你授权的人可见）</li>
+</ul>
+</li>
+<li><strong>初始化选项</strong>（可选但推荐）：<ul>
+<li>勾选 <strong><code>Add a README file</code></strong>：创建一个初始 <code>README</code> 文件（非常重要，用于介绍项目）</li>
+<li>勾选 <strong><code>.gitignore</code></strong>：选择模板（如 <code>Python</code>、<code>Node</code> 等）忽略不需要跟踪的文件</li>
+<li>勾选 <strong><code>Choose a license</code></strong>：为你的项目选择一个开源许可证(不清楚许可证的可以不用选)</li>
+</ul>
+</li>
+<li><strong>创建仓库</strong>：点击页面底部的绿色按钮 <strong><code>Create repository</code></strong></li>
+</ol>
+<p><strong>完成！</strong> 你已成功创建了一个新的 <code>GitHub</code> 仓库，可以开始上传代码、协作和管理项目了</p>
+<p>创建完成之后，会看到 <code>HTTPS</code> 的链接，这个就是仓库的链接，后面的 <code>git</code> 操作会用到</p>
+<h5 id="6-4-3-git-命令"><a href="#6-4-3-git-命令" class="headerlink" title="6.4.3 git 命令"></a>6.4.3 git 命令</h5><p><strong>1. git clone</strong>  </p>
+<ul>
+<li><strong>作用</strong>：将远程仓库复制到本地</li>
+<li><strong>命令</strong>：  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">  git <span class="built_in">clone</span> &lt;远程仓库URL&gt;  <span class="comment"># 默认克隆到同名目录</span></span><br><span class="line">  git <span class="built_in">clone</span> &lt;URL&gt; &lt;自定义目录名&gt;  <span class="comment"># 克隆到指定目录</span></span><br><span class="line">  ```  </span><br><span class="line">- **关键点**：  </span><br><span class="line">  - 自动创建远程跟踪分支（如 `origin/main`）</span><br><span class="line">  - 默认检出 `main` 或 `master` 分支</span><br><span class="line"></span><br><span class="line">**2. git pull**  </span><br><span class="line">- **作用**：拉取远程分支最新内容并合并到当前分支（`= git fetch + git merge`）</span><br><span class="line">- **命令**：  </span><br><span class="line">  ```bash</span><br><span class="line">  git pull origin &lt;分支名&gt;  <span class="comment"># 拉取指定分支</span></span><br><span class="line">  git pull  <span class="comment"># 若已设置上游分支（upstream），可省略参数</span></span><br><span class="line">  ```  </span><br><span class="line">- **冲突处理**：  </span><br><span class="line">  - 若拉取时发生冲突，需手动解决冲突后提交</span><br><span class="line">  - 使用 `git status` 查看冲突文件</span><br><span class="line"></span><br><span class="line">**3. git commit**  </span><br><span class="line">- **作用**：将暂存区（`Staging Area`）的修改保存到本地仓库</span><br><span class="line">- **流程**：  </span><br><span class="line">  1. 添加修改到暂存区：  </span><br><span class="line">     ```bash</span><br><span class="line">     git add &lt;文件名&gt;  <span class="comment"># 添加单个文件</span></span><br><span class="line">     git add .        <span class="comment"># 添加所有修改</span></span><br><span class="line">     ```  </span><br><span class="line">  2. 提交到本地仓库：  </span><br><span class="line">     ```bash</span><br><span class="line">     git commit -m <span class="string">&quot;提交描述&quot;</span>  <span class="comment"># 必须填写清晰的描述</span></span><br><span class="line">     ```  </span><br><span class="line">- **修正提交**：  </span><br><span class="line">  - 修改最后一次提交：  </span><br><span class="line">    ```bash</span><br><span class="line">    git commit --amend  <span class="comment"># 可修改描述或追加新更改</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<p><strong>4. git push</strong>  </p>
+<ul>
+<li><strong>作用</strong>：将本地提交推送到远程仓库</li>
+<li><strong>命令</strong>：  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">  git push origin &lt;分支名&gt;  <span class="comment"># 推送到指定分支</span></span><br><span class="line">  git push -u origin &lt;分支名&gt;  <span class="comment"># 首次推送时设置上游分支（后续可简写为 `git push`）</span></span><br><span class="line">  ```  </span><br><span class="line"></span><br><span class="line">**5. 分支管理**  </span><br><span class="line">- **创建分支**：  </span><br><span class="line">  ```bash</span><br><span class="line">  git branch &lt;新分支名&gt;    <span class="comment"># 创建分支</span></span><br><span class="line">  git checkout -b &lt;新分支名&gt;  <span class="comment"># 创建并切换到该分支</span></span><br><span class="line">  ```  </span><br><span class="line">- **切换分支**：  </span><br><span class="line">  ```bash</span><br><span class="line">  git checkout &lt;分支名&gt;  </span><br><span class="line">  git switch &lt;分支名&gt;      <span class="comment"># Git 2.23+ 推荐方式</span></span><br><span class="line">  ```  </span><br><span class="line">- **合并分支**：  </span><br><span class="line">  ```bash</span><br><span class="line">  git merge &lt;分支名&gt;  <span class="comment"># 将指定分支合并到当前分支</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<p><strong>6. 撤销操作</strong>  </p>
+<ul>
+<li><strong>撤销工作区修改</strong>：  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">  git restore &lt;文件名&gt;  <span class="comment"># 丢弃未暂存的修改（Git 2.23+）</span></span><br><span class="line">  ```  </span><br><span class="line">- **撤销暂存区文件**：  </span><br><span class="line">  ```bash</span><br><span class="line">  git restore --staged &lt;文件名&gt;  <span class="comment"># 将文件移出暂存区</span></span><br><span class="line">  ```  </span><br><span class="line">- **回退提交**：  </span><br><span class="line">  ```bash</span><br><span class="line">  git reset --soft HEAD~1  <span class="comment"># 撤销提交但保留修改  </span></span><br><span class="line">  git reset --hard HEAD~1  <span class="comment"># 彻底丢弃最近一次提交（谨慎使用！）</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<p><strong>7. 查看状态与历史</strong>  </p>
+<ul>
+<li><strong>状态检查</strong>：  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">  git status  <span class="comment"># 查看工作区和暂存区状态</span></span><br><span class="line">  ```  </span><br><span class="line">- **提交历史**：  </span><br><span class="line">  ```bash</span><br><span class="line">  git <span class="built_in">log</span> --oneline  <span class="comment"># 简洁版提交历史</span></span><br><span class="line">  git <span class="built_in">log</span> -p         <span class="comment"># 显示详细修改内容</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<p><strong>8. 冲突解决</strong>  </p>
+<ul>
+<li><strong>触发场景</strong>：<code>git pull</code> 或 <code>git merge</code> 时发生文件冲突</li>
+<li><strong>解决步骤</strong>：  <ol>
+<li>打开冲突文件（搜索 <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code> 标记）  </li>
+<li>手动修改文件，保留所需内容</li>
+<li>标记冲突已解决：  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git add &lt;冲突文件名&gt;</span><br><span class="line">git commit -m <span class="string">&quot;解决冲突&quot;</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+</ul>
+<h3 id="7-调试器-gdb-cgdb"><a href="#7-调试器-gdb-cgdb" class="headerlink" title="7. 调试器 gdb&#x2F;cgdb"></a>7. 调试器 gdb&#x2F;cgdb</h3><p><strong>GDB</strong></p>
+<ul>
+<li><strong>定位：</strong> 命令行调试器，功能极其强大，是 <code>Linux</code>&#x2F;<code>Unix</code> 环境下 <code>C/C++</code> 等程序调试的<strong>核心引擎</strong></li>
+<li><strong>工作模式：</strong> 纯命令行交互。你输入命令，<code>GDB</code> 输出结果</li>
+</ul>
+<p><strong>CGDB (Curses GDB)</strong></p>
+<ul>
+<li><strong>定位：</strong> <code>GDB</code> 的<strong>终端可视化前端</strong>。它不是一个独立的调试器，而是一个封装了 <code>GDB</code> 的<strong>用户界面</strong></li>
+<li><strong>核心思想：</strong> 将终端窗口分成两个主要窗格：<ol>
+<li><strong>上部窗格：</strong> 显示当前正在调试的源代码（类似于 <code>list</code> 命令的输出，但持续可见）</li>
+<li><strong>下部窗格：</strong> 显示 <code>GDB</code> 的命令行界面和输出（就是你直接使用 <code>GDB</code> 时看到的那个界面）</li>
+</ol>
+</li>
+<li><strong>核心能力：</strong> <code>CGDB</code> <strong>完全继承 <code>GDB</code> 的所有调试能力</strong>，因为它只是在 <code>GDB</code> 外面套了一个更友好的 <code>UI</code>。你在 <code>CGDB</code> 的下部窗格中输入的命令，就是原汁原味的 <code>GDB</code> 命令</li>
+</ul>
+<h4 id="7-1-debug和release"><a href="#7-1-debug和release" class="headerlink" title="7.1 debug和release"></a>7.1 debug和release</h4><ul>
+<li>程序的发布方式有两种，<code>debug</code> 和 <code>release</code> 模式，<code>Linux</code> 下 <code>gcc/g++</code> 编译出来的二进制程序默认是 <code>release</code> 模式</li>
+<li>要使用 <code>gdb</code> 调试，<strong>必须</strong>要源代码生成二进制程序的时候，加上 <code>-g</code>(<code>Generate debugging information</code>) 选项，如果没有添加，不能用 <code>gdb</code> 调试</li>
+</ul>
+<p>以下面的代码作为使用示例</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">Sum</span><span class="params">(<span class="type">int</span> start, <span class="type">int</span> end)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> ret = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = start; i &lt;= end; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        ret += i;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> s = <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> e = <span class="number">100</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Start Calculating\n&quot;</span>);</span><br><span class="line">    <span class="type">int</span> sum = Sum(s,e);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;From %d to %d.Sum is %d\n&quot;</span>,s,e,sum);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>debug vs release</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ gcc sum.c -o s1</span><br><span class="line">$ file s1</span><br><span class="line">s1: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=41ec5e3b6e67c06874ac326252d2400c845df920, <span class="keyword">for</span> GNU/Linux 3.2.0, not stripped</span><br><span class="line">$ gcc -g sum.c -o s2</span><br><span class="line">$ file s2</span><br><span class="line">s2: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=8a2666fe3c73713f8232033ece4dc99edd172dcb, <span class="keyword">for</span> GNU/Linux 3.2.0, with debug_info, not stripped</span><br><span class="line">$ </span><br></pre></td></tr></table></figure>
+<p>在带了 <code>-g</code> 选项的二进制文件中，是明显带有 <code>debug_info</code> 的</p>
+<h4 id="7-2-gdb-使用"><a href="#7-2-gdb-使用" class="headerlink" title="7.2 gdb 使用"></a>7.2 gdb 使用</h4><table>
+<thead>
+<tr>
+<th align="left">命令</th>
+<th align="left">简写</th>
+<th align="left">功能说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>list [file:]line/func</code></td>
+<td align="left"><code>l</code></td>
+<td align="left">显示源代码。可指定文件、行号或函数名</td>
+</tr>
+<tr>
+<td align="left"><code>break [file:]line/func</code></td>
+<td align="left"><code>b</code></td>
+<td align="left">设置断点。可指定文件、行号、函数名或地址</td>
+</tr>
+<tr>
+<td align="left"><code>info breakpoints</code></td>
+<td align="left"><code>i b</code></td>
+<td align="left">列出所有断点信息</td>
+</tr>
+<tr>
+<td align="left"><code>delete [breakpoints] [n]</code></td>
+<td align="left"><code>d</code></td>
+<td align="left">删除所有断点或指定编号 <code>n</code> 的断点</td>
+</tr>
+<tr>
+<td align="left"><code>run [arg1 arg2 ...]</code></td>
+<td align="left"><code>r</code></td>
+<td align="left">从头开始运行程序（可带命令行参数）</td>
+</tr>
+<tr>
+<td align="left"><code>continue</code></td>
+<td align="left"><code>c</code></td>
+<td align="left">从当前停止点继续运行程序。</td>
+</tr>
+<tr>
+<td align="left"><code>next</code></td>
+<td align="left"><code>n</code></td>
+<td align="left"><strong>单步执行（不进入函数）</strong>。执行下一行代码，如果遇到函数调用，将其视为一个整体执行</td>
+</tr>
+<tr>
+<td align="left"><code>step</code></td>
+<td align="left"><code>s</code></td>
+<td align="left"><strong>单步执行（进入函数）</strong>。执行下一行代码，如果该行是函数调用，则进入该函数内部</td>
+</tr>
+<tr>
+<td align="left"><code>finish</code></td>
+<td align="left"><code>fin</code></td>
+<td align="left">执行完当前函数，并停在函数返回后的位置</td>
+</tr>
+<tr>
+<td align="left"><code>print expression</code></td>
+<td align="left"><code>p</code></td>
+<td align="left">计算并打印表达式的值（变量、表达式、函数调用结果等）</td>
+</tr>
+<tr>
+<td align="left"><code>display expression</code></td>
+<td align="left"><code>disp</code></td>
+<td align="left">每次程序停止时自动打印表达式的值</td>
+</tr>
+<tr>
+<td align="left"><code>info locals</code></td>
+<td align="left"><code>i lo</code></td>
+<td align="left">显示当前栈帧（函数）的局部变量</td>
+</tr>
+<tr>
+<td align="left"><code>backtrace</code></td>
+<td align="left"><code>bt</code></td>
+<td align="left">显示函数调用栈（栈回溯）</td>
+</tr>
+<tr>
+<td align="left"><code>frame [n]</code></td>
+<td align="left"><code>f</code></td>
+<td align="left">选择栈帧 <code>n</code>（<code>bt</code> 输出中的编号）。<code>f 0</code> 通常是当前正在执行的函数</td>
+</tr>
+<tr>
+<td align="left"><code>watch expression</code></td>
+<td align="left"></td>
+<td align="left">设置<strong>观察点</strong>，当表达式的值被改变时暂停程序</td>
+</tr>
+<tr>
+<td align="left"><strong><code>set var [variable]=[value]</code></strong></td>
+<td align="left">set var</td>
+<td align="left"><strong>运行时修改变量值</strong><br>（例：<code>set var x=10</code> 或 <code>set var ptr=0x7fffffffd</code>）</td>
+</tr>
+<tr>
+<td align="left"><strong><code>disable breakpoints [n]</code></strong></td>
+<td align="left"><code>dis b [n]</code></td>
+<td align="left"><strong>禁用断点</strong><br>禁用指定编号的断点（如 <code>dis b 2</code>），若省略编号则禁用所有断点</td>
+</tr>
+<tr>
+<td align="left"><strong><code>enable breakpoints [n]</code></strong></td>
+<td align="left"><code>ena b [n]</code></td>
+<td align="left"><strong>启用断点</strong><br>启用指定编号的断点（如 <code>ena b 1-3</code>），若省略编号则启用所有断点</td>
+</tr>
+<tr>
+<td align="left"><strong><code>info breakpoints</code></strong></td>
+<td align="left"><code>i b</code></td>
+<td align="left"><strong>扩展说明：列出断点详情</strong><br>显示所有断点的<strong>编号、位置、启用状态、命中次数</strong><br>（例：<code>Num Type Disp Enb Address What</code>）</td>
+</tr>
+<tr>
+<td align="left"><code>quit</code></td>
+<td align="left"><code>q</code></td>
+<td align="left">退出 GDB</td>
+</tr>
+</tbody></table>
+<h4 id="7-3-开始调试"><a href="#7-3-开始调试" class="headerlink" title="7.3 开始调试"></a>7.3 开始调试</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br></pre></td><td class="code"><pre><span class="line">$ gdb s2</span><br><span class="line">GNU gdb (Ubuntu 15.0.50.20240403-0ubuntu1) 15.0.50.20240403-git</span><br><span class="line">Copyright (C) 2024 Free Software Foundation, Inc.</span><br><span class="line">License GPLv3+: GNU GPL version 3 or later &lt;http://gnu.org/licenses/gpl.html&gt;</span><br><span class="line">This is free software: you are free to change and redistribute it.</span><br><span class="line">There is NO WARRANTY, to the extent permitted by law.</span><br><span class="line">Type <span class="string">&quot;show copying&quot;</span> and <span class="string">&quot;show warranty&quot;</span> <span class="keyword">for</span> details.</span><br><span class="line">This GDB was configured as <span class="string">&quot;x86_64-linux-gnu&quot;</span>.</span><br><span class="line">Type <span class="string">&quot;show configuration&quot;</span> <span class="keyword">for</span> configuration details.</span><br><span class="line">For bug reporting instructions, please see:</span><br><span class="line">&lt;https://www.gnu.org/software/gdb/bugs/&gt;.</span><br><span class="line">Find the GDB manual and other documentation resources online at:</span><br><span class="line">    &lt;http://www.gnu.org/software/gdb/documentation/&gt;.</span><br><span class="line"></span><br><span class="line">For <span class="built_in">help</span>, <span class="built_in">type</span> <span class="string">&quot;help&quot;</span>.</span><br><span class="line">Type <span class="string">&quot;apropos word&quot;</span> to search <span class="keyword">for</span> commands related to <span class="string">&quot;word&quot;</span>...</span><br><span class="line">Reading symbols from s2...</span><br><span class="line">(gdb) l <span class="comment"># 查看源代码</span></span><br><span class="line">1       <span class="comment">#include &lt;stdio.h&gt;</span></span><br><span class="line">2</span><br><span class="line">3       int Sum(int start, int end)</span><br><span class="line">4       &#123;</span><br><span class="line">5           int ret = 0;</span><br><span class="line">6           <span class="keyword">for</span> (int i = start; i &lt;= end; i++)</span><br><span class="line">7           &#123;</span><br><span class="line">8               ret += i;</span><br><span class="line">9           &#125;</span><br><span class="line">10          <span class="built_in">return</span> ret;</span><br><span class="line">(gdb) <span class="comment"># 在gdb中，上一次的命令可以直接通过回车的方式继续使用，而不需要再次输入</span></span><br><span class="line">11      &#125;</span><br><span class="line">12</span><br><span class="line">13      int main()</span><br><span class="line">14      &#123;</span><br><span class="line">15          int s = 0;</span><br><span class="line">16          int e = 100;</span><br><span class="line">17          <span class="built_in">printf</span>(<span class="string">&quot;Start Calculating\n&quot;</span>);</span><br><span class="line">18          int <span class="built_in">sum</span> = Sum(s,e);</span><br><span class="line">19          <span class="built_in">printf</span>(<span class="string">&quot;From %d to %d.Sum is %d\n&quot;</span>,s,e,<span class="built_in">sum</span>);</span><br><span class="line">20          <span class="built_in">return</span> 0;</span><br><span class="line">(gdb) </span><br><span class="line">21      &#125;</span><br><span class="line">(gdb) b 16 <span class="comment"># 创建断点，删除的时候通过断点的编号进行删除</span></span><br><span class="line">Breakpoint 1 at 0x11b0: file sum.c, line 16.</span><br><span class="line">(gdb) r</span><br><span class="line">Starting program: /home/wyf/s2 </span><br><span class="line"></span><br><span class="line">This GDB supports auto-downloading debuginfo from the following URLs:</span><br><span class="line">  &lt;https://debuginfod.ubuntu.com&gt;</span><br><span class="line">Enable debuginfod <span class="keyword">for</span> this session? (y or [n]) y</span><br><span class="line">Debuginfod has been enabled.</span><br><span class="line">To make this setting permanent, add <span class="string">&#x27;set debuginfod enabled on&#x27;</span> to .gdbinit.</span><br><span class="line">[Thread debugging using libthread_db enabled]</span><br><span class="line">Using host libthread_db library <span class="string">&quot;/lib/x86_64-linux-gnu/libthread_db.so.1&quot;</span>.</span><br><span class="line"></span><br><span class="line">Breakpoint 1, main () at sum.c:16</span><br><span class="line">16          int e = 100;</span><br><span class="line">(gdb) i lo <span class="comment"># 显示当前函数内的变量</span></span><br><span class="line">s = 0</span><br><span class="line">e = -8616</span><br><span class="line"><span class="built_in">sum</span> = 32767</span><br><span class="line">(gdb) n</span><br><span class="line">17          <span class="built_in">printf</span>(<span class="string">&quot;Start Calculating\n&quot;</span>);</span><br><span class="line">(gdb) </span><br><span class="line">Start Calculating</span><br><span class="line">18          int <span class="built_in">sum</span> = Sum(s,e);</span><br><span class="line">(gdb) s <span class="comment"># 进入函数内部</span></span><br><span class="line">Sum (start=0, end=100) at sum.c:5</span><br><span class="line">5           int ret = 0;</span><br><span class="line">(gdb) watch ret <span class="comment"># 监视ret的值，每次变换的时候都会停止</span></span><br><span class="line">Hardware watchpoint 2: ret</span><br><span class="line">(gdb) n</span><br><span class="line"></span><br><span class="line">Hardware watchpoint 2: ret</span><br><span class="line"></span><br><span class="line">Old value = -134230016</span><br><span class="line">New value = 0</span><br><span class="line">Sum (start=0, end=100) at sum.c:6</span><br><span class="line">6           <span class="keyword">for</span> (int i = start; i &lt;= end; i++)</span><br><span class="line">(gdb) n</span><br><span class="line">8               ret += i;</span><br><span class="line">(gdb) </span><br><span class="line">6           <span class="keyword">for</span> (int i = start; i &lt;= end; i++)</span><br><span class="line">(gdb) </span><br><span class="line">8               ret += i;</span><br><span class="line">(gdb) </span><br><span class="line"></span><br><span class="line">Hardware watchpoint 2: ret</span><br><span class="line"></span><br><span class="line">Old value = 0</span><br><span class="line">New value = 1</span><br><span class="line">Sum (start=0, end=100) at sum.c:6</span><br><span class="line">6           <span class="keyword">for</span> (int i = start; i &lt;= end; i++)</span><br><span class="line">(gdb) </span><br><span class="line">8               ret += i;</span><br><span class="line">(gdb) </span><br><span class="line"></span><br><span class="line">Hardware watchpoint 2: ret</span><br><span class="line"></span><br><span class="line">Old value = 1</span><br><span class="line">New value = 3</span><br><span class="line">Sum (start=0, end=100) at sum.c:6</span><br><span class="line">6           <span class="keyword">for</span> (int i = start; i &lt;= end; i++)</span><br><span class="line">(gdb)</span><br><span class="line"></span><br><span class="line">Hardware watchpoint 2: ret</span><br><span class="line"></span><br><span class="line">Old value = 3</span><br><span class="line">New value = 6</span><br><span class="line">Sum (start=0, end=100) at sum.c:6</span><br><span class="line">6           <span class="keyword">for</span> (int i = start; i &lt;= end; i++)</span><br><span class="line"></span><br><span class="line">(gdb) <span class="built_in">disable</span> 2 <span class="comment"># 移除当前观察点</span></span><br><span class="line">(gdb) fin <span class="comment"># 跳出当前函数</span></span><br><span class="line">Run till <span class="built_in">exit</span> from <span class="comment">#0  Sum (start=0, end=100) at sum.c:6</span></span><br><span class="line">0x00005555555551d5 <span class="keyword">in</span> main () at sum.c:18</span><br><span class="line">18          int <span class="built_in">sum</span> = Sum(s,e);</span><br><span class="line">Value returned is <span class="variable">$1</span> = 5050</span><br><span class="line">(gdb) n</span><br><span class="line">Watchpoint 2 deleted because the program has left the block</span><br><span class="line"><span class="keyword">in</span> <span class="built_in">which</span> its expression is valid.</span><br><span class="line">19          <span class="built_in">printf</span>(<span class="string">&quot;From %d to %d.Sum is %d\n&quot;</span>,s,e,<span class="built_in">sum</span>);</span><br><span class="line">(gdb) i lo</span><br><span class="line">s = 0</span><br><span class="line">e = 100</span><br><span class="line"><span class="built_in">sum</span> = 5050</span><br><span class="line">(gdb) n</span><br><span class="line">From 0 to 100.Sum is 5050</span><br><span class="line">20          <span class="built_in">return</span> 0;</span><br><span class="line">(gdb) </span><br><span class="line">21      &#125;</span><br><span class="line">(gdb) </span><br><span class="line">Download failed: Invalid argument.  Continuing without <span class="built_in">source</span> file ./csu/../sysdeps/nptl/libc_start_call_main.h.</span><br><span class="line">__libc_start_call_main (main=main@entry=0x55555555519d &lt;main&gt;, argc=argc@entry=1, argv=argv@entry=0x7fffffffde58)</span><br><span class="line">    at ../sysdeps/nptl/libc_start_call_main.h:74</span><br><span class="line">warning: 74     ../sysdeps/nptl/libc_start_call_main.h: No such file or directory</span><br><span class="line">(gdb) </span><br><span class="line">[Inferior 1 (process 1588250) exited normally]</span><br><span class="line">(gdb) q</span><br><span class="line">$</span><br></pre></td></tr></table></figure>
+
+<h4 id="7-4-补充：设置条件断点（Conditional-Breakpoint）"><a href="#7-4-补充：设置条件断点（Conditional-Breakpoint）" class="headerlink" title="7.4 补充：设置条件断点（Conditional Breakpoint）"></a>7.4 补充：设置条件断点（Conditional Breakpoint）</h4><p>设置条件断点</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">break [位置] if [条件]</span><br></pre></td></tr></table></figure>
+<p>或给已存在的断点添加条件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">condition [断点编号] [条件]</span><br></pre></td></tr></table></figure>
+
+<p><strong>具体使用方式</strong></p>
+<table>
+<thead>
+<tr>
+<th>场景</th>
+<th>命令示例</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>新建条件断点</strong></td>
+<td><code>break main if argc &gt; 1</code></td>
+<td>在 <code>main</code> 函数入口设置断点，仅当命令行参数&gt; <code>1</code> 时触发</td>
+</tr>
+<tr>
+<td></td>
+<td><code>break 18 if s == 0</code></td>
+<td>在源代码 <code>18</code> 行设置断点，仅当变量 <code>s</code> 等于 <code>0</code> 时触发</td>
+</tr>
+<tr>
+<td></td>
+<td><code>break Sum if end &gt; 50</code></td>
+<td>在 <code>Sum</code> 函数入口设置断点，仅当 <code>end</code> 参数 &gt; <code>50</code> 时触发</td>
+</tr>
+<tr>
+<td><strong>修改现有断点</strong></td>
+<td><code>condition 1 i == 50</code></td>
+<td>为 <code>1</code> 号断点添加条件：仅当变量 <code>i</code> 等于 <code>50</code> 时触发</td>
+</tr>
+<tr>
+<td></td>
+<td><code>condition 2 ret % 5 == 0</code></td>
+<td>为 <code>2</code> 号断点添加条件：仅当ret是5的倍数时触发</td>
+</tr>
+<tr>
+<td><strong>删除条件</strong></td>
+<td><code>condition 3</code></td>
+<td>删除 <code>3</code> 号断点的条件（变为普通断点）</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>小技巧：使用 ignore [断点编号] [次数] 可以忽略断点前N次触发，如 ignore 1 100会跳过1号断点的前100次触发</p>
+</blockquote>
+
+                
+                <p class="end">__END__</p>
+            </div>
+            <div class="article-footer">
+                <div class="suffix-box">
+    <div class="suffix-box-left">
+        <img src="/image/sidebar/avatar.jpg" alt="Live For Code">
+    </div>
+    <div class="suffix-box-right">
+        <span class="suffix-box-title">文章作者：</span>Live For Code
+        <br>
+        <span class="suffix-box-title">文章出处：</span><a href="/2025/11/19/Linux%E5%9F%BA%E7%A1%80%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/" target="_blank">Linux基础开发工具</a>
+        <br>
+        <span class="suffix-box-title">作者签名：</span>简单地活着, 肆意又精彩.
+        <br>
+        <span class="suffix-box-title">关于主题：</span><a href="https://github.com/first19326/Hexo-LiveForCode" target="_blank">Hexo - Live For Code</a>
+        <br>
+        <span class="suffix-box-title">版权声明：</span>文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" title="BY-NC-SA" target="_blank">BY-NC-SA</a> 许可协议，转载请注明出处
+        <br>
+    </div>
+    <div style="clear: both;"></div>
+</div>
+                
+                
+                <div class="article-prev-next">
+                    
+                        <a href="/2025/11/19/Linux%E5%9F%BA%E7%A1%80%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/Linux%E5%9F%BA%E7%A1%80%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/%E5%9F%BA%E7%A1%80%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/" class="prev-prefix">« </a> 上一篇：    <a href="/2025/11/19/Linux%E5%9F%BA%E7%A1%80%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/Linux%E5%9F%BA%E7%A1%80%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/%E5%9F%BA%E7%A1%80%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/" title="发布于 2025-11-19 03:57"></a>
+                        <br>
+                    
+                    
+                        <a href="/2025/11/18/Linux%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4/" class="next-prefix">» </a> 下一篇：    <a href="/2025/11/18/Linux%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4/" title="发布于 2025-11-18 07:14">Linux基础指令</a>
+                    
+                </div>
+            </div>
+            
+    <div class="article-comments">
+        
+            <div class="comments-title">
+                评论列表
+            </div>
+        
+        <div class="comments-content"></div>
+    </div>
+    
+ 
+        </div>
+    
+</div>
+    <div id="footer">
+    <div><span class='face'>ღゝ◡╹)ノ♡</span></div><div>【人生若只如初见<span><i class='iconfont icon-like-fill'></i></span>何事秋风悲画扇】</div><div>&copy; 2020-2023 WorstOne. All Rights Reserved.</div>
+</div>
+    <div id="sidebar">
+    <div class="menu-wrap" style="display:none;">
+        
+            <div class="menu-notice">
+                <span class="iconfont icon-notice"></span>
+                <div class="notice">
+                    <span>简单地活着，肆意而又精彩！</span>
+                </div>
+            </div>
+        
+        <nav class="menu">
+            <div class="menu-introduce"> 
+                <div class="introduce-avatar">
+                    <img src="/image/sidebar/avatar.jpg">
+                </div> 
+                <div class="introduce-info"> 
+                    <div class="introduce-user">
+                        
+                            <a href="https://worstone.cn" target="_blank"><span>Live For Code</span></a>
+                        
+                    </div>
+                </div> 
+            </div> 
+            <div class="menu-list">
+                <ul>
+                    
+                        <li class=""><a href="/" class="" target="_self"><span class="iconfont icon-home-fill"></span>首页</a></li>
+                    
+                        <li class=""><a href="/category" class="" target="_self"><span class="iconfont icon-folder-fill"></span>分类</a></li>
+                    
+                        <li class=""><a href="/tag" class="" target="_self"><span class="iconfont icon-discount-fill"></span>标签</a></li>
+                    
+                        <li class=""><a href="/archive" class="" target="_self"><span class="iconfont icon-calendar-fill"></span>归档</a></li>
+                    
+                        <li class=""><a href="/donate" class="" target="_self"><span class="iconfont icon-heart-fill"></span>赞赏</a></li>
+                    
+                        <li class=""><a href="/about" class="" target="_self"><span class="iconfont icon-about-fill"></span>关于</a></li>
+                    
+                        <li class=""><a href="/atom.xml" class="" target="_blank"><span class="iconfont icon-rss"></span>订阅</a></li>
+                    
+                        <li class=""><a href="javascript:;" class="search" target="_self"><span class="iconfont icon-search-menu"></span>搜索</a></li>
+                    
+                        <li class=""><a href="/comment" class="" target="_self"><span class="iconfont icon-comments-fill"></span>留言板</a></li>
+                    
+                        <li class=""><a href="/friend" class="" target="_self"><span class="iconfont icon-link"></span>友情链接</a></li>
+                    
+                </ul> 
+            </div> 
+            <div class="menu-link">
+                <div class="box">
+                    <div class="image-box"></div>
+                </div>
+                
+                    <a name="知乎" href="https://zhihu.com/people/worstone-29" class="" target="_blank" data=""><span class="iconfont icon-zhihu"></span></a>
+                
+                    <a name="微博" href="https://weibo.com/u/5749847477" class="" target="_blank" data=""><span class="iconfont icon-weibo"></span></a>
+                
+                    <a name="QQ" href="javascript:;" class="image" target="_self" data="/image/sidebar/qq.png"><span class="iconfont icon-qq"></span></a>
+                
+                    <a name="微信" href="javascript:;" class="" target="_self" data=""><span class="iconfont icon-wechat"></span></a>
+                
+                    <a name="GitHub" href="https://github.com/first19326" class="" target="_blank" data=""><span class="iconfont icon-github"></span></a>
+                
+            </div> 
+        </nav>
+        <button class="menu-button-close"></button>
+        <div class="morph-shape" id="morph-shape" data-morph-open="M-7.312,0H15c0,0,66,113.339,66,399.5C81,664.006,15,800,15,800H-7.312V0z;M-7.312,0H100c0,0,0,113.839,0,400c0,264.506,0,400,0,400H-7.312V0z">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 800" preserveAspectRatio="none">
+                <path d="M-7.312,0H0c0,0,0,113.839,0,400c0,264.506,0,400,0,400h-7.312V0z"/>
+            </svg>
+        </div>
+    </div>
+    <button class="menu-button-open">MENU</button>
+    <div class="menu-cover"></div>
+</div>
+    <link type="text/css" rel="stylesheet" href="/css/search.css">
+<script type="text/javascript" src="/js/iscroll.js"></script>
+<script type="text/javascript" src="/js/instantsearch.min.js"></script>
+<div class="search-window">
+    <div class="search-content">
+        <div class="search-content-icon">
+            <i class="iconfont icon-search"></i>
+        </div>
+        <div id="search-input" class="search-input"></div>
+    </div>
+
+    <div class="search-scroll">
+        <div class="search-result">
+            <div id="search-stats" class="search-stats"></div>
+            <div id="search-hits"></div>
+            <div id="search-pagination" class="search-pagination"></div>
+        </div>
+    </div>
+
+    <span class="search-close-icon">
+        <i class="iconfont icon-close"></i>
+    </span>
+</div>
+    <div id="tools">
+    <div class="progressbar-top"></div>
+    
+    <link type="text/css" rel="stylesheet" href="/css/APlayer.css">
+    <script type="text/javascript" src="/js/APlayer.min.js"></script>
+    <script type="text/javascript" src="/js/Meting.min.js"></script>
+    <script>
+        var meting_api = 'https://api.i-meto.com/meting/api?server=:server&type=:type&id=:id&auth=:auth&r=:r';
+    </script>
+    <meting-js id="3778678" lrcshow="false" server="netease" type="playlist" fixed="true" autoplay="false" loop="all" order="random" preload="auto" volume="0.67" mutex="true"></meting-js>
+
+    <div class="wrap-right">
+    <div class="wrap-right-hide">
+         <div class="wrap-right-button favorites">
+            <div class="iconbox" switch="false">
+                <span class="iconfont icon-favorites"></span>
+            </div>
+            <span class="icontext">关注</span>
+         </div>
+        <div class="wrap-right-button search">
+            <div class="iconbox">
+                <span class="iconfont icon-search-menu"></span>
+            </div>
+            <span class="icontext">搜索</span>
+        </div>
+        <div class="wrap-right-button menu-button">
+            <div class="iconbox">
+                <span class="iconfont icon-menu"></span>
+            </div>
+            <span class="icontext">菜单</span>
+        </div>
+        <div class="wrap-right-button mode">
+            <div class="light">
+                <div class="iconbox">
+                    <span class="iconfont icon-daymode"></span>
+                </div>
+                <span class="icontext">浅色模式</span>
+            </div>
+            <div class="dark">
+                <div class="iconbox">
+                    <span class="iconfont icon-nightmode-fill"></span>
+                </div>
+                <span class="icontext">深色模式</span>
+            </div>
+        </div>
+        <div class="wrap-right-button bottom">
+            <div class="iconbox">
+                <span class="iconfont icon-top"></span>
+            </div>
+            <span class="icontext">跳至底部</span>
+        </div>
+    </div>
+    <div class="wrap-right-show">
+        <div class="wrap-right-button set">
+            <div class="iconbox">
+                <span class="iconfont icon-setting"></span>
+            </div>
+            <span class="icontext">设置</span>
+        </div>
+        <div class="wrap-right-button top">
+            <div class="iconbox">
+                <span class="iconfont icon-top"></span>
+            </div>
+            <span class="icontext">返回顶部</span>
+        </div>
+    </div>
+</div>
+    <div class="loading"></div>
+</div>
+    <script>
+    window.config = {
+        GitHubUserName     : "first19326",
+        GitHubRepositories : "Hexo-LiveForCode",
+
+        User             : "Live For Code",
+        UserAvatar       : "/image/sidebar/avatar.jpg",
+        WebsiteStartDate : "2020-01-01",
+        Home             : "https://worstone.cn",
+
+        WebsiteTitleBlur         : "(◍´꒳`◍) Hi, Live For Code",
+        WebsiteTitleBlurTimeOut  : 500,
+        WebsiteTitleFocus        : "(*´∇｀*) 欢迎回来!",
+        WebsiteTitleFocusTimeOut : 1000,
+        WebsiteFavicon           : {
+            light : "/image/website/logo/logo.png",
+            dark  : "/image/website/logo/logo-dark.png"
+        },
+
+        ProgressBar : {
+            id       : "topProgressBar",
+            color    : "#77B6FF",
+            height   : "2px",
+            duration : 0.2
+        },
+
+        Loading: {
+            rebound : {
+                tension  : 16,
+                friction : 5
+            },
+            spinner : {
+                id     : "spinner",
+                radius : 90,
+                sides  : 3,
+                depth  : 4,
+                colors : {
+                    background : "#F0F0F0",
+                    stroke     : "#272633",
+                    base       : "",
+                    child      : "#272633"
+                },
+                alwaysForward : true,
+                restAt        : 0.5,
+                renderBase    : false
+            }
+        },
+
+        HomeHeaderAnimationRendered : true,
+        HomeHeaderAnimation         : {
+            radius      : 15,
+            density     : 0.2,
+            color       : "rgba(255, 255, 255, .2)",
+            clearOffset : 0.3
+        },
+
+        BackAnimationRendered          : true,
+        IEBrowserBackAnimationRendered : false,
+        BackAnimation                  : {
+            colorSaturation  : "60%",
+            colorBrightness  : "50%",
+            colorAlpha       : 0.5,
+            colorCycleSpeed  : 5,
+            verticalPosition : "random",
+            horizontalSpeed  : 200,
+            ribbonCount      : 3,
+            strokeSize       : 0,
+            parallaxAmount   : -0.2,
+            animateSections  : true
+        },
+
+        HomeHeaderImage : [
+            
+                "",
+            
+        ],
+        HomeBannerText  : "",
+
+        ArticleHeaderImage : [
+            
+                "/image/header/article.jpg",
+            
+        ],
+
+        OtherBannerText : "",
+
+        Error : {
+            icon    : "icon-swimming",
+            title   : "PAGE NOT FOUND",
+            content : [
+                
+                    "很抱歉，您访问的页面不存在！",
+                
+                    "可能是输入地址有误或该地址已变更。",
+                
+            ],
+            buttons : [
+                
+                    {
+                        icon  : "icon-home",
+                        text  : "返回首页",
+                        href  : "/",
+                        class : ""
+                    },
+                
+            ]
+        },
+
+        MenuNotice : {
+            enable : true,
+            notice : "简单地活着，肆意而又精彩！",
+            speed  : 20
+        },
+        MenuList : [
+            
+                {
+                    name   : "首页",
+                    icon   : "icon-home-fill",
+                    href   : "/",
+                    type   : "index",
+                    class  : "",
+                    target : "_self"
+                },
+            
+                {
+                    name   : "分类",
+                    icon   : "icon-folder-fill",
+                    href   : "/category",
+                    type   : "category",
+                    class  : "",
+                    target : "_self"
+                },
+            
+                {
+                    name   : "标签",
+                    icon   : "icon-discount-fill",
+                    href   : "/tag",
+                    type   : "tag",
+                    class  : "",
+                    target : "_self"
+                },
+            
+                {
+                    name   : "归档",
+                    icon   : "icon-calendar-fill",
+                    href   : "/archive",
+                    type   : "archive",
+                    class  : "",
+                    target : "_self"
+                },
+            
+                {
+                    name   : "赞赏",
+                    icon   : "icon-heart-fill",
+                    href   : "/donate",
+                    type   : "donate",
+                    class  : "",
+                    target : "_self"
+                },
+            
+                {
+                    name   : "关于",
+                    icon   : "icon-about-fill",
+                    href   : "/about",
+                    type   : "about",
+                    class  : "",
+                    target : "_self"
+                },
+            
+                {
+                    name   : "订阅",
+                    icon   : "icon-rss",
+                    href   : "/atom.xml",
+                    type   : "",
+                    class  : "",
+                    target : "_blank"
+                },
+            
+                {
+                    name   : "搜索",
+                    icon   : "icon-search-menu",
+                    href   : "javascript:;",
+                    type   : "",
+                    class  : "search",
+                    target : "_self"
+                },
+            
+                {
+                    name   : "留言板",
+                    icon   : "icon-comments-fill",
+                    href   : "/comment",
+                    type   : "comment",
+                    class  : "",
+                    target : "_self"
+                },
+            
+                {
+                    name   : "友情链接",
+                    icon   : "icon-link",
+                    href   : "/friend",
+                    type   : "friend",
+                    class  : "",
+                    target : "_self"
+                },
+            
+        ],
+        MenuLink : [
+            
+                
+                    {
+                        name   : "知乎",
+                        icon   : "icon-zhihu",
+                        href   : "https://zhihu.com/people/worstone-29",
+                        class  : "",
+                        target : "_blank",
+                        image  : ""
+                    },
+                
+                    {
+                        name   : "微博",
+                        icon   : "icon-weibo",
+                        href   : "https://weibo.com/u/5749847477",
+                        class  : "",
+                        target : "_blank",
+                        image  : ""
+                    },
+                
+                    {
+                        name   : "QQ",
+                        icon   : "icon-qq",
+                        href   : "javascript:;",
+                        class  : "image",
+                        target : "_self",
+                        image  : "/image/sidebar/qq.png"
+                    },
+                
+                    {
+                        name   : "微信",
+                        icon   : "icon-wechat",
+                        href   : "javascript:;",
+                        class  : "",
+                        target : "_self",
+                        image  : ""
+                    },
+                
+                    {
+                        name   : "GitHub",
+                        icon   : "icon-github",
+                        href   : "https://github.com/first19326",
+                        class  : "",
+                        target : "_blank",
+                        image  : ""
+                    },
+                
+            
+        ],
+
+        FooterStyle : 2,
+        BottomText  : "<div><span class='face'>ღゝ◡╹)ノ♡</span></div><div>【人生若只如初见<span><i class='iconfont icon-like-fill'></i></span>何事秋风悲画扇】</div><div>&copy; 2020-2023 WorstOne. All Rights Reserved.</div>",
+
+        ConsoleList : [
+            
+                
+                    [
+                        
+                            
+                                "Based on cnblogs theme SimpleMemory.",
+                            
+                                "",
+                            
+                        
+                    ],
+                
+                    [
+                        
+                            
+                                "SimpleMemory Author:",
+                            
+                                "BNDong",
+                            
+                        
+                    ],
+                
+                    [
+                        
+                            
+                                "Theme:",
+                            
+                                "LiveForCode",
+                            
+                        
+                    ],
+                
+            
+        ],
+
+        FontIconExtend : "",
+
+        Donate : {
+            paypal  : "",
+            bitcoin : "",
+            alipay  : "/image/donate/alipay.png",
+            wechat  : "/image/donate/wechat.png"
+        },
+
+        Search : {
+            applicationID : "010C3EANT8",
+            apiKey        : "c7abab9f11b79102b9aff7fe6d41447d",
+            indexName     : "Notes",
+            hits          : {
+                page : 10
+            },
+            labels        : {
+                placeholder : "搜索",
+                empty       : "未发现与 「${query}」 相关的内容",
+                stats       : "${hits} 条相关条目，使用了 ${time} 毫秒",
+            }
+        }, 
+
+        Comment : {
+            switch : true,
+            type   : "Valine",
+        },
+
+        Waline : {
+            el              : ".comments-content",
+            serverURL       : "",
+            path            : window.location.pathname,
+            meta            : "['nick', 'mail', 'link']",
+            requiredMeta    : "['nick', 'mail']",
+            pageSize        : 10,
+            lang            : "zh-cn",
+            locale: {
+                admin       : "博主",
+                anonymous   : "匿名用户",
+                sofa        : "快来做第一个评论的人吧 ~",
+                placeholder : "你是我一生只会遇见一次的惊喜...",
+            },
+            dark            : "html[color-scheme='dark']",
+            search          : false,
+            pageview        : true,
+            comment         : true,
+            copyright       : false,
+        },
+
+        Valine : {
+            el             : ".comments-content",
+            appId          : "srhKtvWPQTWYKh3qX8G8M7v0-gzGzoHsz",
+            appKey         : "8uVSP1q6UlALVC5igYfIfv2h",
+            serverURLs     : "",
+            placeholder    : "你是我一生只会遇见一次的惊喜...",
+            avatar         : "mm",
+            meta           : "nick,mail,link",
+            requiredFields : "nick,mail",
+            pageSize       : 5,
+            lang           : "zh-cn",
+            visitor        : true,
+            enableQQ       : true
+        },
+
+        Tocbot : {
+            switch                : true,
+            tocSelector           : ".toc",
+            contentSelector       : ".article-body",
+            headingSelector       : "h1, h2, h3, h4, h5",
+            headingsOffset        : 0,
+            scrollSmooth          : true,
+            scrollSmoothOffset    : -5,
+            positionFixedSelector : ".toc",
+            positionFixedClass    : "toc-fixed",
+            fixedSidebarOffset    : "",
+        },
+
+        Require : {
+            baseUrl     : "/js/",
+            waitSeconds : 100
+        },
+
+        Music : {
+            type : "Meting"
+        },
+        APlayer : {
+            container : ".aplayer",
+            fixed     : true,
+            autoplay  : false,
+            loop      : "all",
+            order     : "random",
+            preload   : "auto",
+            volume    : 0.67,
+            mutex     : true,
+            lrcType   : 3,
+            audio     : [
+                
+                    {
+                        name   : "Endless Tears",
+                        artist : "CLIFF EDGE",
+                        cover  : "/music/cover/Endless Tears.jpg",
+                        url    : "/music/song/Endless Tears.mp3",
+                        lrc    : "/music/lrc/Endless Tears.lrc"
+                    },
+                
+            ]
+        },
+        Meting : {
+            api      : "https://api.i-meto.com/meting/api",
+            id       : "3778678", 
+            lrcshow  : false, 
+            server   : "netease", 
+            type     : "playlist", 
+            fixed    : true, 
+            autoplay : false, 
+            loop     : "all", 
+            order    : "random", 
+            preload  : "auto", 
+            volume   : 0.67, 
+            mutex    : true
+        },
+
+        Mouse : {
+            enable  : true,
+            options : {
+                size  : 6,
+                sizeF : 24
+            }
+        },
+
+        LazyLoad : {
+            default : "/image/website/lazyload.svg"
+        },
+  
+        Style : {
+            aplayer          : "/css/APlayer.css",
+            archive          : "/css/archive.css",
+            base             : "/css/base.css",
+            clipboard        : "/css/clipboard.css",
+            code             : "/css/code.css",
+            donate           : "/css/donate.css",
+            fancybox         : "/css/jquery.fancybox.css",
+            footer           : "/css/footer.css",
+            iconfont         : "/iconfont/iconfont.css",
+            index            : "/css/index.css",
+            menuBubble       : "/css/menu-bubble.css",
+            mouse            : "/css/mouse.css",
+            page             : "/css/page.css",
+            post             : "/css/post.css",
+            search           : "/css/search.css",
+            tocbot           : "/css/tocbot.css",
+            valine           : "/css/valine.css",
+            waline           : "/css/waline.css",
+            walineCustom     : "/css/waline-custom.css"
+        },
+
+        Script: {
+            aplayer          : "/js/APlayer.min.js",
+            config           : "/js/require.config.js",
+            index            : "/js/index.js",
+            instantSearch    : "/js/instantsearch.min.js",
+            iscroll          : "/js/iscroll.js",
+            jQuery           : "/js/jquery-3.4.1.min.js",
+            loading          : "/js/loading.js",
+            meting           : "/js/Meting.min.js",
+            require          : "/js/require.min.js",
+            waline           : "/js/waline.mjs",
+            pageview         : "/js/pageview.mjs",
+            comment          : "/js/comment.mjs",
+        },
+
+        Font: {
+            LongCang    : "/font/LongCang.css",
+            Monda       : "/font/Monda.css",
+            NotoSansSC  : "/font/NotoSansSC.css",
+            NotoSerifSC : "/font/NotoSerifSC.css",
+            Playball    : "/font/Playball.css",
+            PTMono      : "/font/PTMono.css",
+            Roboto      : "/font/Roboto.css",
+            RobotoSlab  : "/font/RobotoSlab.css",
+            Rosario     : "/font/Rosario.css",
+            UbuntuMono  : "/font/UbuntuMono.css"
+        },
+
+        Suffix : {
+            about : "简单地活着, 肆意又精彩."
+        },
+            
+        Theme : {
+            url  : "https://github.com/first19326/Hexo-LiveForCode",
+            name : "Hexo - Live For Code"
+        }  
+    };
+</script>
+    <script type="text/javascript" src="/js/index.js"></script>
+</body>
+</html>
